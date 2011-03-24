@@ -35,34 +35,34 @@
             this.customerPage = new System.Windows.Forms.TabPage();
             this.customerView = new System.Windows.Forms.DataGridView();
             this.customerMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.新增資料ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.修改資料ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.刪除資料ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.重新整理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCustomerMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editCustomerMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.delCustomerMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshCustomerMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supplierPage = new System.Windows.Forms.TabPage();
             this.supplierView = new System.Windows.Forms.DataGridView();
             this.supplierMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.addSupplierMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editSupplierMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.delSupplierMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshSupplierMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.makingPage = new System.Windows.Forms.TabPage();
             this.makingView = new System.Windows.Forms.DataGridView();
             this.makingMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.addMakingMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editMakingMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.delMakingMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshMakingMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.daomuPage = new System.Windows.Forms.TabPage();
             this.daomuView = new System.Windows.Forms.DataGridView();
             this.daomuMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.連線至資料庫ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addDaomuMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editDaomuMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.delDaomuMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshDaomuMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.settingMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.connectMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -80,7 +80,7 @@
             this.daomuPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.daomuView)).BeginInit();
             this.daomuMenu.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripContainer1
@@ -103,7 +103,7 @@
             // 
             // toolStripContainer1.TopToolStripPanel
             // 
-            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.menuStrip1);
+            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.menuStrip);
             // 
             // statusStrip
             // 
@@ -152,36 +152,36 @@
             // 
             this.customerMenu.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.customerMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.新增資料ToolStripMenuItem,
-            this.修改資料ToolStripMenuItem,
-            this.刪除資料ToolStripMenuItem,
-            this.重新整理ToolStripMenuItem});
+            this.addCustomerMenuItem,
+            this.editCustomerMenuItem,
+            this.delCustomerMenuItem,
+            this.refreshCustomerMenuItem});
             this.customerMenu.Name = "customerMenu";
             this.customerMenu.Size = new System.Drawing.Size(143, 100);
             // 
-            // 新增資料ToolStripMenuItem
+            // addCustomerMenuItem
             // 
-            this.新增資料ToolStripMenuItem.Name = "新增資料ToolStripMenuItem";
-            this.新增資料ToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
-            this.新增資料ToolStripMenuItem.Text = "新增資料";
+            this.addCustomerMenuItem.Name = "addCustomerMenuItem";
+            this.addCustomerMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.addCustomerMenuItem.Text = "新增資料";
             // 
-            // 修改資料ToolStripMenuItem
+            // editCustomerMenuItem
             // 
-            this.修改資料ToolStripMenuItem.Name = "修改資料ToolStripMenuItem";
-            this.修改資料ToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
-            this.修改資料ToolStripMenuItem.Text = "修改資料";
+            this.editCustomerMenuItem.Name = "editCustomerMenuItem";
+            this.editCustomerMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.editCustomerMenuItem.Text = "修改資料";
             // 
-            // 刪除資料ToolStripMenuItem
+            // delCustomerMenuItem
             // 
-            this.刪除資料ToolStripMenuItem.Name = "刪除資料ToolStripMenuItem";
-            this.刪除資料ToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
-            this.刪除資料ToolStripMenuItem.Text = "刪除資料";
+            this.delCustomerMenuItem.Name = "delCustomerMenuItem";
+            this.delCustomerMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.delCustomerMenuItem.Text = "刪除資料";
             // 
-            // 重新整理ToolStripMenuItem
+            // refreshCustomerMenuItem
             // 
-            this.重新整理ToolStripMenuItem.Name = "重新整理ToolStripMenuItem";
-            this.重新整理ToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
-            this.重新整理ToolStripMenuItem.Text = "重新整理";
+            this.refreshCustomerMenuItem.Name = "refreshCustomerMenuItem";
+            this.refreshCustomerMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.refreshCustomerMenuItem.Text = "重新整理";
             // 
             // supplierPage
             // 
@@ -189,7 +189,7 @@
             this.supplierPage.Location = new System.Drawing.Point(4, 22);
             this.supplierPage.Name = "supplierPage";
             this.supplierPage.Padding = new System.Windows.Forms.Padding(3);
-            this.supplierPage.Size = new System.Drawing.Size(776, 490);
+            this.supplierPage.Size = new System.Drawing.Size(776, 486);
             this.supplierPage.TabIndex = 1;
             this.supplierPage.Text = "供應商基本資料";
             this.supplierPage.UseVisualStyleBackColor = true;
@@ -202,50 +202,50 @@
             this.supplierView.Location = new System.Drawing.Point(3, 3);
             this.supplierView.Name = "supplierView";
             this.supplierView.RowTemplate.Height = 24;
-            this.supplierView.Size = new System.Drawing.Size(770, 484);
+            this.supplierView.Size = new System.Drawing.Size(770, 480);
             this.supplierView.TabIndex = 0;
             // 
             // supplierMenu
             // 
             this.supplierMenu.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.supplierMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3,
-            this.toolStripMenuItem4});
+            this.addSupplierMenuItem,
+            this.editSupplierMenuItem,
+            this.delSupplierMenuItem,
+            this.refreshSupplierMenuItem});
             this.supplierMenu.Name = "customerMenu";
             this.supplierMenu.Size = new System.Drawing.Size(143, 100);
             // 
-            // toolStripMenuItem1
+            // addSupplierMenuItem
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(142, 24);
-            this.toolStripMenuItem1.Text = "新增資料";
+            this.addSupplierMenuItem.Name = "addSupplierMenuItem";
+            this.addSupplierMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.addSupplierMenuItem.Text = "新增資料";
             // 
-            // toolStripMenuItem2
+            // editSupplierMenuItem
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(142, 24);
-            this.toolStripMenuItem2.Text = "修改資料";
+            this.editSupplierMenuItem.Name = "editSupplierMenuItem";
+            this.editSupplierMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.editSupplierMenuItem.Text = "修改資料";
             // 
-            // toolStripMenuItem3
+            // delSupplierMenuItem
             // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(142, 24);
-            this.toolStripMenuItem3.Text = "刪除資料";
+            this.delSupplierMenuItem.Name = "delSupplierMenuItem";
+            this.delSupplierMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.delSupplierMenuItem.Text = "刪除資料";
             // 
-            // toolStripMenuItem4
+            // refreshSupplierMenuItem
             // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(142, 24);
-            this.toolStripMenuItem4.Text = "重新整理";
+            this.refreshSupplierMenuItem.Name = "refreshSupplierMenuItem";
+            this.refreshSupplierMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.refreshSupplierMenuItem.Text = "重新整理";
             // 
             // makingPage
             // 
             this.makingPage.Controls.Add(this.makingView);
             this.makingPage.Location = new System.Drawing.Point(4, 22);
             this.makingPage.Name = "makingPage";
-            this.makingPage.Size = new System.Drawing.Size(776, 490);
+            this.makingPage.Size = new System.Drawing.Size(776, 486);
             this.makingPage.TabIndex = 2;
             this.makingPage.Text = "材料基本資料";
             this.makingPage.UseVisualStyleBackColor = true;
@@ -258,50 +258,50 @@
             this.makingView.Location = new System.Drawing.Point(0, 0);
             this.makingView.Name = "makingView";
             this.makingView.RowTemplate.Height = 24;
-            this.makingView.Size = new System.Drawing.Size(776, 490);
+            this.makingView.Size = new System.Drawing.Size(776, 486);
             this.makingView.TabIndex = 0;
             // 
             // makingMenu
             // 
             this.makingMenu.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.makingMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem5,
-            this.toolStripMenuItem6,
-            this.toolStripMenuItem7,
-            this.toolStripMenuItem8});
+            this.addMakingMenuItem,
+            this.editMakingMenuItem,
+            this.delMakingMenuItem,
+            this.refreshMakingMenuItem});
             this.makingMenu.Name = "customerMenu";
             this.makingMenu.Size = new System.Drawing.Size(143, 100);
             // 
-            // toolStripMenuItem5
+            // addMakingMenuItem
             // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(142, 24);
-            this.toolStripMenuItem5.Text = "新增資料";
+            this.addMakingMenuItem.Name = "addMakingMenuItem";
+            this.addMakingMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.addMakingMenuItem.Text = "新增資料";
             // 
-            // toolStripMenuItem6
+            // editMakingMenuItem
             // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(142, 24);
-            this.toolStripMenuItem6.Text = "修改資料";
+            this.editMakingMenuItem.Name = "editMakingMenuItem";
+            this.editMakingMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.editMakingMenuItem.Text = "修改資料";
             // 
-            // toolStripMenuItem7
+            // delMakingMenuItem
             // 
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(142, 24);
-            this.toolStripMenuItem7.Text = "刪除資料";
+            this.delMakingMenuItem.Name = "delMakingMenuItem";
+            this.delMakingMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.delMakingMenuItem.Text = "刪除資料";
             // 
-            // toolStripMenuItem8
+            // refreshMakingMenuItem
             // 
-            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(142, 24);
-            this.toolStripMenuItem8.Text = "重新整理";
+            this.refreshMakingMenuItem.Name = "refreshMakingMenuItem";
+            this.refreshMakingMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.refreshMakingMenuItem.Text = "重新整理";
             // 
             // daomuPage
             // 
             this.daomuPage.Controls.Add(this.daomuView);
             this.daomuPage.Location = new System.Drawing.Point(4, 22);
             this.daomuPage.Name = "daomuPage";
-            this.daomuPage.Size = new System.Drawing.Size(776, 490);
+            this.daomuPage.Size = new System.Drawing.Size(776, 486);
             this.daomuPage.TabIndex = 3;
             this.daomuPage.Text = "刀模基本資料";
             this.daomuPage.UseVisualStyleBackColor = true;
@@ -314,71 +314,71 @@
             this.daomuView.Location = new System.Drawing.Point(0, 0);
             this.daomuView.Name = "daomuView";
             this.daomuView.RowTemplate.Height = 24;
-            this.daomuView.Size = new System.Drawing.Size(776, 490);
+            this.daomuView.Size = new System.Drawing.Size(776, 486);
             this.daomuView.TabIndex = 0;
             // 
             // daomuMenu
             // 
             this.daomuMenu.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.daomuMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem9,
-            this.toolStripMenuItem10,
-            this.toolStripMenuItem11,
-            this.toolStripMenuItem12});
+            this.addDaomuMenuItem,
+            this.editDaomuMenuItem,
+            this.delDaomuMenuItem,
+            this.refreshDaomuMenuItem});
             this.daomuMenu.Name = "customerMenu";
-            this.daomuMenu.Size = new System.Drawing.Size(143, 100);
+            this.daomuMenu.Size = new System.Drawing.Size(153, 122);
             // 
-            // toolStripMenuItem9
+            // addDaomuMenuItem
             // 
-            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(142, 24);
-            this.toolStripMenuItem9.Text = "新增資料";
+            this.addDaomuMenuItem.Name = "addDaomuMenuItem";
+            this.addDaomuMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.addDaomuMenuItem.Text = "新增資料";
             // 
-            // toolStripMenuItem10
+            // editDaomuMenuItem
             // 
-            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(142, 24);
-            this.toolStripMenuItem10.Text = "修改資料";
+            this.editDaomuMenuItem.Name = "editDaomuMenuItem";
+            this.editDaomuMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.editDaomuMenuItem.Text = "修改資料";
             // 
-            // toolStripMenuItem11
+            // delDaomuMenuItem
             // 
-            this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            this.toolStripMenuItem11.Size = new System.Drawing.Size(142, 24);
-            this.toolStripMenuItem11.Text = "刪除資料";
+            this.delDaomuMenuItem.Name = "delDaomuMenuItem";
+            this.delDaomuMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.delDaomuMenuItem.Text = "刪除資料";
             // 
-            // toolStripMenuItem12
+            // refreshDaomuMenuItem
             // 
-            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(142, 24);
-            this.toolStripMenuItem12.Text = "重新整理";
+            this.refreshDaomuMenuItem.Name = "refreshDaomuMenuItem";
+            this.refreshDaomuMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.refreshDaomuMenuItem.Text = "重新整理";
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.設定ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(784, 28);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip";
+            this.menuStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.settingMenuItem});
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(784, 28);
+            this.menuStrip.TabIndex = 0;
+            this.menuStrip.Text = "menuStrip";
             // 
-            // 設定ToolStripMenuItem
+            // settingMenuItem
             // 
-            this.設定ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.連線至資料庫ToolStripMenuItem});
-            this.設定ToolStripMenuItem.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.設定ToolStripMenuItem.Name = "設定ToolStripMenuItem";
-            this.設定ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
-            this.設定ToolStripMenuItem.Text = "設定";
+            this.settingMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.connectMenuItem});
+            this.settingMenuItem.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.settingMenuItem.Name = "settingMenuItem";
+            this.settingMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.settingMenuItem.Text = "設定";
             // 
-            // 連線至資料庫ToolStripMenuItem
+            // connectMenuItem
             // 
-            this.連線至資料庫ToolStripMenuItem.Name = "連線至資料庫ToolStripMenuItem";
-            this.連線至資料庫ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.連線至資料庫ToolStripMenuItem.Text = "連線至資料庫";
+            this.connectMenuItem.Name = "connectMenuItem";
+            this.connectMenuItem.Size = new System.Drawing.Size(174, 24);
+            this.connectMenuItem.Text = "連線至資料庫";
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -386,9 +386,9 @@
             this.ClientSize = new System.Drawing.Size(784, 562);
             this.Controls.Add(this.toolStripContainer1);
             this.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "xinrongys";
             this.toolStripContainer1.BottomToolStripPanel.ResumeLayout(false);
             this.toolStripContainer1.BottomToolStripPanel.PerformLayout();
@@ -410,8 +410,8 @@
             this.daomuPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.daomuView)).EndInit();
             this.daomuMenu.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -425,33 +425,33 @@
         private System.Windows.Forms.TabPage supplierPage;
         private System.Windows.Forms.TabPage makingPage;
         private System.Windows.Forms.TabPage daomuPage;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 設定ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 連線至資料庫ToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip;
+        private System.Windows.Forms.ToolStripMenuItem settingMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem connectMenuItem;
         private System.Windows.Forms.DataGridView customerView;
         private System.Windows.Forms.DataGridView supplierView;
         private System.Windows.Forms.DataGridView makingView;
         private System.Windows.Forms.DataGridView daomuView;
         private System.Windows.Forms.ContextMenuStrip customerMenu;
-        private System.Windows.Forms.ToolStripMenuItem 新增資料ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 修改資料ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 刪除資料ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 重新整理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addCustomerMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editCustomerMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem delCustomerMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem refreshCustomerMenuItem;
         private System.Windows.Forms.ContextMenuStrip supplierMenu;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem addSupplierMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editSupplierMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem delSupplierMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem refreshSupplierMenuItem;
         private System.Windows.Forms.ContextMenuStrip makingMenu;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
+        private System.Windows.Forms.ToolStripMenuItem addMakingMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editMakingMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem delMakingMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem refreshMakingMenuItem;
         private System.Windows.Forms.ContextMenuStrip daomuMenu;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem11;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem12;
+        private System.Windows.Forms.ToolStripMenuItem addDaomuMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editDaomuMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem delDaomuMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem refreshDaomuMenuItem;
     }
 }
 
