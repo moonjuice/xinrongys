@@ -16,6 +16,8 @@ namespace xinrongys
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+            //Customer cs = new Customer();
+            //cs._Id = "123";
         }
     }
 }
