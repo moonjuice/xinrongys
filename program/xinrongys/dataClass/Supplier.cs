@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace xinrongys
 {
@@ -33,6 +35,30 @@ namespace xinrongys
         #endregion
         #region Constructors
         public Supplier() { }
+        public Supplier(MySqlDataReader myData) 
+        {
+            this.id = myData.GetString(0);
+            this.name = myData.GetString(1);
+            this.shortname = myData.GetString(2);
+            this.contacter = myData.GetString(3);
+            this.mobile = (int)myData.GetDecimal(4);
+            this.phone1 = myData.GetString(5);
+            this.ext1 = (int)myData.GetDecimal(6); ;
+            this.phone2 = myData.GetString(7);
+            this.ext2 = (int)myData.GetDecimal(8);
+            this.province = myData.GetString(9);
+            this.city = myData.GetString(10);
+            this.town = myData.GetString(11);
+            this.village = myData.GetString(12);
+            this.district = myData.GetString(13);
+            this.zone = myData.GetString(14);
+            this.addr = myData.GetString(15);
+            this.mail = myData.GetString(16);
+            this.b_name = myData.GetString(17);
+            this.b_account = myData.GetString(18);
+            this.day = (int)myData.GetDecimal(19);
+            this.currency = myData.GetString(20);
+        }
         public Supplier(string name, string shortname, string contacter, int mobile, string phone1, int ext1, string phone2, int ext2, string province, string city, string town, string village, string district, string zone, string addr, string mail, string b_name, string b_account, int day, string currency)
         {
             this.name = name;

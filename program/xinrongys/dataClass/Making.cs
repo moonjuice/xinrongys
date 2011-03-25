@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace xinrongys
 {
@@ -18,6 +20,15 @@ namespace xinrongys
         #endregion
         #region Constructors
         public Making() { }
+        public Making(MySqlDataReader myData) 
+        {
+            this.id = myData.GetString(0);
+            this.name = myData.GetString(1);
+            this.s_id = myData.GetString(2);
+            this.type = myData.GetString(3);
+            this.unit = myData.GetString(4);
+            this.price = (int)myData.GetDecimal(5);
+        }
         public Making(string name, string s_id, string type, string unit, int price)
         {
             this.name = name;

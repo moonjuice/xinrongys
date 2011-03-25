@@ -82,13 +82,20 @@ namespace xinrongys
                     freshData("daomu");
                     break;
                 case "customer":
-
+                    customers.Clear();
+                    customers = connect.getCustomers();
                     break;
                 case "supplier":
+                    suppliers.Clear();
+                    suppliers = connect.getSuppliers();
                     break;
                 case "making":
+                    makings.Clear();
+                    makings = connect.getMakings();
                     break;
                 case "daomu":
+                    daomus.Clear();
+                    daomus = connect.getDaomus();
                     break;
                 default:
                     break;

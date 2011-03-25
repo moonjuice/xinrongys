@@ -66,26 +66,143 @@ namespace xinrongys
             }
             return result;
         }
-        public List<T> getRowDatas(string tableName)
+        public List<Customer> getCustomers()
         {
-            switch (tableName)
+            string sqlString = "select * from customer order by id desc";
+            List<Customer> cs = new List<Customer>();
+            try
             {
-                case "customer":
-                    List<Customer> cs = new List<Customer>();
-                    return cs;
-                case "supplier":
-                    List<Customer> ss = new List<Customer>();
-                    return ss;
-                case "making":
-                    List<Customer> ms = new List<Customer>();
-                    return ms;                    
-                case "daomu":
-                    List<Customer> ds = new List<Customer>();
-                    return ds;
-                default:
-                    return null;
+                MySqlCommand cmd = new MySqlCommand(sqlString, conn);
+                MySqlDataReader myData = cmd.ExecuteReader();
+                if (!myData.HasRows)
+                {
+                    // 如果沒有資料,顯示沒有資料的訊息 
+                    MessageBox.Show("目前沒有客戶資料!!");
+                }
+                else
+                {
+                    while (myData.Read())
+                    {
+                        cs.Add(new Customer(myData));
+                    }
+                }
+                myData.Close();
             }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("錯誤代碼： " + ex.Number + "\n 錯誤訊息 : " + ex.Message);
+            }
+            return cs;
         }
+        public List<Supplier> getSuppliers()
+        {
+            string sqlString = "select * from supplier order by id desc";
+            List<Supplier> ss = new List<Supplier>();
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sqlString, conn);
+                MySqlDataReader myData = cmd.ExecuteReader();
+                if (!myData.HasRows)
+                {
+                    // 如果沒有資料,顯示沒有資料的訊息 
+                    MessageBox.Show("目前沒有供應商資料!!");
+                }
+                else
+                {
+                    while (myData.Read())
+                    {
+                        ss.Add(new Supplier(myData));
+                    }                    
+                }
+                myData.Close();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("錯誤代碼： " + ex.Number + "\n 錯誤訊息 : " + ex.Message);
+            }
+            return ss;            
+        }
+        public List<Making> getMakings()
+        {
+            string sqlString = "select * from making order by id desc";
+            List<Making> ms = new List<Making>();
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sqlString, conn);
+                MySqlDataReader myData = cmd.ExecuteReader();
+                if (!myData.HasRows)
+                {
+                    // 如果沒有資料,顯示沒有資料的訊息 
+                    MessageBox.Show("目前沒有材料資料!!");
+                }
+                else
+                {
+                    while (myData.Read())
+                    {
+                        ms.Add(new Making(myData));
+                    }
+                }
+                myData.Close();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("錯誤代碼： " + ex.Number + "\n 錯誤訊息 : " + ex.Message);
+            }
+            return ms;
+        }
+        public List<Daomu> getDaomus()
+        {
+            string sqlString = "select * from daomu order by id desc";
+            List<Daomu> ds = new List<Daomu>();
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sqlString, conn);
+                MySqlDataReader myData = cmd.ExecuteReader();
+                if (!myData.HasRows)
+                {
+                    // 如果沒有資料,顯示沒有資料的訊息 
+                    MessageBox.Show("目前沒有刀模資料!!");
+                }
+                else
+                {
+                    while (myData.Read())
+                    {
+                        ds.Add(new Daomu(myData));
+                    }
+                }
+                myData.Close();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("錯誤代碼： " + ex.Number + "\n 錯誤訊息 : " + ex.Message);
+            }
+            return ds;
+        }
+        //public List getRowDatas(string tableName)
+        //{
+        //    string sqlString = "select * from " + tableName + " order by id desc"; 
+        //    switch (tableName)
+        //    {
+        //        case "customer":
+        //            #region 讀取客戶資料
+                    
+        //            #endregion
+        //        case "supplier":
+        //            #region 讀取供應商資料
+                    
+        //            #endregion
+        //        case "making":
+        //            #region 讀取材料資料
+                    
+        //            #endregion                    
+        //        case "daomu":
+        //            #region 讀取刀模資料
+                    
+        //            #endregion
+        //        default:
+        //            return null;
+        //    }
+        //}
         #endregion
 
     }
