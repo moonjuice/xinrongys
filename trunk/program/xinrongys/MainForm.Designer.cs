@@ -326,30 +326,30 @@
             this.delDaomuMenuItem,
             this.refreshDaomuMenuItem});
             this.daomuMenu.Name = "customerMenu";
-            this.daomuMenu.Size = new System.Drawing.Size(153, 122);
+            this.daomuMenu.Size = new System.Drawing.Size(143, 100);
             // 
             // addDaomuMenuItem
             // 
             this.addDaomuMenuItem.Name = "addDaomuMenuItem";
-            this.addDaomuMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.addDaomuMenuItem.Size = new System.Drawing.Size(142, 24);
             this.addDaomuMenuItem.Text = "新增資料";
             // 
             // editDaomuMenuItem
             // 
             this.editDaomuMenuItem.Name = "editDaomuMenuItem";
-            this.editDaomuMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.editDaomuMenuItem.Size = new System.Drawing.Size(142, 24);
             this.editDaomuMenuItem.Text = "修改資料";
             // 
             // delDaomuMenuItem
             // 
             this.delDaomuMenuItem.Name = "delDaomuMenuItem";
-            this.delDaomuMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.delDaomuMenuItem.Size = new System.Drawing.Size(142, 24);
             this.delDaomuMenuItem.Text = "刪除資料";
             // 
             // refreshDaomuMenuItem
             // 
             this.refreshDaomuMenuItem.Name = "refreshDaomuMenuItem";
-            this.refreshDaomuMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.refreshDaomuMenuItem.Size = new System.Drawing.Size(142, 24);
             this.refreshDaomuMenuItem.Text = "重新整理";
             // 
             // menuStrip
@@ -377,6 +377,7 @@
             this.connectMenuItem.Name = "connectMenuItem";
             this.connectMenuItem.Size = new System.Drawing.Size(174, 24);
             this.connectMenuItem.Text = "連線至資料庫";
+            this.connectMenuItem.Click += new System.EventHandler(this.connectMenuItem_Click);
             // 
             // MainForm
             // 
