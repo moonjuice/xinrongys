@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace xinrongys
 {
@@ -22,6 +24,19 @@ namespace xinrongys
         #endregion
         #region Constructors
         public Daomu() { }
+        public Daomu(MySqlDataReader myData) 
+        {
+            this.id = myData.GetString(0);
+            this.type = myData.GetString(1);
+            this.cabinet = (int)myData.GetDecimal(2);
+            this.d_long = (int)myData.GetDecimal(3);
+            this.d_width = (int)myData.GetDecimal(4);
+            this.d_round = (int)myData.GetDecimal(5);
+            this.l_m = (int)myData.GetDecimal(6);
+            this.l_d = (int)myData.GetDecimal(7);
+            this.w_m = (int)myData.GetDecimal(8);
+            this.w_d = (int)myData.GetDecimal(9);
+        }
         public Daomu(string type, int cabinet, int d_long, int d_width, int d_round, int l_m, int l_d, int w_m, int w_d)
         {
             this.type = type;
