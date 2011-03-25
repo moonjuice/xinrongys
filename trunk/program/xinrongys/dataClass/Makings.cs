@@ -58,6 +58,20 @@ namespace xinrongys
             get { return price; }
             set { price = value; }
         }
+        static public List<string> getColumnHeader()
+        {
+            List<string> header = new List<string>();
+            header.Add("材料編號");
+            header.Add("材料名稱");
+            return header;
+        }
+        public List<string> getColumn()
+        {
+            List<string> column = new List<string>();
+            column.Add(this.id);
+            column.Add(this.name);
+            return column;
+        }
         #endregion
     }
     #endregion

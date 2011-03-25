@@ -144,6 +144,7 @@
             this.customerView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customerView.Location = new System.Drawing.Point(3, 3);
             this.customerView.Name = "customerView";
+            this.customerView.ReadOnly = true;
             this.customerView.RowTemplate.Height = 24;
             this.customerView.Size = new System.Drawing.Size(770, 476);
             this.customerView.TabIndex = 0;
@@ -186,10 +187,10 @@
             // supplierPage
             // 
             this.supplierPage.Controls.Add(this.supplierView);
-            this.supplierPage.Location = new System.Drawing.Point(4, 22);
+            this.supplierPage.Location = new System.Drawing.Point(4, 26);
             this.supplierPage.Name = "supplierPage";
             this.supplierPage.Padding = new System.Windows.Forms.Padding(3);
-            this.supplierPage.Size = new System.Drawing.Size(776, 486);
+            this.supplierPage.Size = new System.Drawing.Size(776, 482);
             this.supplierPage.TabIndex = 1;
             this.supplierPage.Text = "供應商基本資料";
             this.supplierPage.UseVisualStyleBackColor = true;
@@ -201,8 +202,9 @@
             this.supplierView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.supplierView.Location = new System.Drawing.Point(3, 3);
             this.supplierView.Name = "supplierView";
+            this.supplierView.ReadOnly = true;
             this.supplierView.RowTemplate.Height = 24;
-            this.supplierView.Size = new System.Drawing.Size(770, 480);
+            this.supplierView.Size = new System.Drawing.Size(770, 476);
             this.supplierView.TabIndex = 0;
             // 
             // supplierMenu
@@ -243,9 +245,9 @@
             // makingPage
             // 
             this.makingPage.Controls.Add(this.makingView);
-            this.makingPage.Location = new System.Drawing.Point(4, 22);
+            this.makingPage.Location = new System.Drawing.Point(4, 26);
             this.makingPage.Name = "makingPage";
-            this.makingPage.Size = new System.Drawing.Size(776, 486);
+            this.makingPage.Size = new System.Drawing.Size(776, 482);
             this.makingPage.TabIndex = 2;
             this.makingPage.Text = "材料基本資料";
             this.makingPage.UseVisualStyleBackColor = true;
@@ -257,8 +259,9 @@
             this.makingView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.makingView.Location = new System.Drawing.Point(0, 0);
             this.makingView.Name = "makingView";
+            this.makingView.ReadOnly = true;
             this.makingView.RowTemplate.Height = 24;
-            this.makingView.Size = new System.Drawing.Size(776, 486);
+            this.makingView.Size = new System.Drawing.Size(776, 482);
             this.makingView.TabIndex = 0;
             // 
             // makingMenu
@@ -299,9 +302,9 @@
             // daomuPage
             // 
             this.daomuPage.Controls.Add(this.daomuView);
-            this.daomuPage.Location = new System.Drawing.Point(4, 22);
+            this.daomuPage.Location = new System.Drawing.Point(4, 26);
             this.daomuPage.Name = "daomuPage";
-            this.daomuPage.Size = new System.Drawing.Size(776, 486);
+            this.daomuPage.Size = new System.Drawing.Size(776, 482);
             this.daomuPage.TabIndex = 3;
             this.daomuPage.Text = "刀模基本資料";
             this.daomuPage.UseVisualStyleBackColor = true;
@@ -313,8 +316,9 @@
             this.daomuView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.daomuView.Location = new System.Drawing.Point(0, 0);
             this.daomuView.Name = "daomuView";
+            this.daomuView.ReadOnly = true;
             this.daomuView.RowTemplate.Height = 24;
-            this.daomuView.Size = new System.Drawing.Size(776, 486);
+            this.daomuView.Size = new System.Drawing.Size(776, 482);
             this.daomuView.TabIndex = 0;
             // 
             // daomuMenu

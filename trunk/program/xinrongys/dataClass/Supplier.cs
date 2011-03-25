@@ -5,8 +5,8 @@ using System.Text;
 
 namespace xinrongys
 {
-    #region Customer
-    public class Customer
+    #region Supplier
+    public class Supplier
     {
         #region Member Variables
         protected string id;
@@ -32,8 +32,8 @@ namespace xinrongys
         protected string currency;
         #endregion
         #region Constructors
-        public Customer() { }
-        public Customer(string name, string shortname, string contacter, int mobile, string phone1, int ext1, string phone2, int ext2, string province, string city, string town, string village, string district, string zone, string addr, string mail, string b_name, string b_account, int day, string currency)
+        public Supplier() { }
+        public Supplier(string name, string shortname, string contacter, int mobile, string phone1, int ext1, string phone2, int ext2, string province, string city, string town, string village, string district, string zone, string addr, string mail, string b_name, string b_account, int day, string currency)
         {
             this.name = name;
             this.shortname = shortname;
@@ -162,6 +162,24 @@ namespace xinrongys
         {
             get { return currency; }
             set { currency = value; }
+        }
+        static public List<string> getColumnHeader()
+        {
+            List<string> header = new List<string>();
+            header.Add("供應商編號");
+            header.Add("供應商名稱");
+            header.Add("聯絡人");
+            header.Add("聯絡人手機");
+            return header;
+        }
+        public List<string> getColumn()
+        {
+            List<string> column = new List<string>();
+            column.Add(this.id);
+            column.Add(this.name);
+            column.Add(this.contacter);
+            column.Add(this.mobile.ToString());
+            return column;
         }
         #endregion
     }
