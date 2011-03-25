@@ -72,15 +72,15 @@
       <DependentUpon>ConnectForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Connector.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="Daomu.cs" />
+    <Compile Include="dataClass\Customer.cs" />
+    <Compile Include="dataClass\Daomu.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Makings.cs" />
+    <Compile Include="dataClass\Makings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ConnectForm.resx">
@@ -107,7 +107,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Supplier.cs" />
+    <Compile Include="dataClass\Supplier.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

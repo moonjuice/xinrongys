@@ -86,6 +86,20 @@ namespace xinrongys
             get { return w_d; }
             set { w_d = value; }
         }
+        static public List<string> getColumnHeader()
+        {
+            List<string> header = new List<string>();
+            header.Add("¤M¼Ò½s¸¹");
+            header.Add("¤M¼ÒºØÃş");
+            return header;
+        }
+        public List<string> getColumn()
+        {
+            List<string> column = new List<string>();
+            column.Add(this.id);
+            column.Add(this.type);
+            return column;
+        }
         #endregion
     }
     #endregion
