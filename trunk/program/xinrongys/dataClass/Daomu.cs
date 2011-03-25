@@ -93,7 +93,7 @@ namespace xinrongys
             header.Add("¤M¼ÒºØÃş");
             return header;
         }
-        public List<string> getColumn()
+        public List<string> getRow()
         {
             List<string> column = new List<string>();
             column.Add(this.id);

@@ -66,8 +66,26 @@ namespace xinrongys
             }
             return result;
         }
-
-
+        public List<T> getRowDatas(string tableName)
+        {
+            switch (tableName)
+            {
+                case "customer":
+                    List<Customer> cs = new List<Customer>();
+                    return cs;
+                case "supplier":
+                    List<Customer> ss = new List<Customer>();
+                    return ss;
+                case "making":
+                    List<Customer> ms = new List<Customer>();
+                    return ms;                    
+                case "daomu":
+                    List<Customer> ds = new List<Customer>();
+                    return ds;
+                default:
+                    return null;
+            }
+        }
         #endregion
 
     }

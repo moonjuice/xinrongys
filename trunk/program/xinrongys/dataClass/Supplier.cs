@@ -172,7 +172,7 @@ namespace xinrongys
             header.Add("聯絡人手機");
             return header;
         }
-        public List<string> getColumn()
+        public List<string> getRow()
         {
             List<string> column = new List<string>();
             column.Add(this.id);
