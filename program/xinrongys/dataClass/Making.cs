@@ -5,8 +5,8 @@ using System.Text;
 
 namespace xinrongys
 {
-    #region Makings
-    public class Makings
+    #region Making
+    public class Making
     {
         #region Member Variables
         protected string id;
@@ -17,8 +17,8 @@ namespace xinrongys
         protected int price;
         #endregion
         #region Constructors
-        public Makings() { }
-        public Makings(string name, string s_id, string type, string unit, int price)
+        public Making() { }
+        public Making(string name, string s_id, string type, string unit, int price)
         {
             this.name = name;
             this.s_id = s_id;
@@ -65,7 +65,7 @@ namespace xinrongys
             header.Add("§÷®Æ¦WºÙ");
             return header;
         }
-        public List<string> getColumn()
+        public List<string> getRow()
         {
             List<string> column = new List<string>();
             column.Add(this.id);

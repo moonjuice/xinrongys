@@ -15,7 +15,7 @@ namespace xinrongys
         private ConnectForm cf;
         private List<Customer> customers = new List<Customer>();
         private List<Supplier> suppliers = new List<Supplier>();
-        private List<Makings> makings = new List<Makings>();
+        private List<Making> makings = new List<Making>();
         private List<Daomu> daomus = new List<Daomu>();
         public MainForm()
         {
@@ -23,7 +23,7 @@ namespace xinrongys
             #region 初始化表格
             customerView.ColumnCount = Customer.getColumnHeader().Count;
             supplierView.ColumnCount = Supplier.getColumnHeader().Count;
-            makingView.ColumnCount = Makings.getColumnHeader().Count;
+            makingView.ColumnCount = Making.getColumnHeader().Count;
             daomuView.ColumnCount = Daomu.getColumnHeader().Count;
             for (int i = 0; i < Customer.getColumnHeader().Count; i++)
             {
@@ -33,9 +33,9 @@ namespace xinrongys
             {
                 supplierView.Columns[i].Name = Supplier.getColumnHeader()[i];
             }
-            for (int i = 0; i < Makings.getColumnHeader().Count; i++)
+            for (int i = 0; i < Making.getColumnHeader().Count; i++)
             {
-                makingView.Columns[i].Name = Makings.getColumnHeader()[i];
+                makingView.Columns[i].Name = Making.getColumnHeader()[i];
             }
             for (int i = 0; i < Daomu.getColumnHeader().Count; i++)
             {
@@ -82,6 +82,7 @@ namespace xinrongys
                     freshData("daomu");
                     break;
                 case "customer":
+
                     break;
                 case "supplier":
                     break;
@@ -112,28 +113,28 @@ namespace xinrongys
                     customerView.Rows.Clear();
                     foreach(Customer c in customers)
                     {
-                        customerView.Rows.Add(c.getColumn());
+                        customerView.Rows.Add(c.getRow());
                     }
                     break;
                 case "supplier":
                     supplierView.Rows.Clear();
                     foreach (Supplier s in suppliers)
                     {
-                        supplierView.Rows.Add(s.getColumn());
+                        supplierView.Rows.Add(s.getRow());
                     }
                     break;
                 case "making":
                     makingView.Rows.Clear();
-                    foreach (Makings m in makings)
+                    foreach (Making m in makings)
                     {
-                        makingView.Rows.Add(m.getColumn());
+                        makingView.Rows.Add(m.getRow());
                     }
                     break;
                 case "daomu":
                     daomuView.Rows.Clear();
                     foreach (Daomu d in daomus)
                     {
-                        daomuView.Rows.Add(d.getColumn());
+                        daomuView.Rows.Add(d.getRow());
                     }
                     break;
                 default:
