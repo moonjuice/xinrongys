@@ -140,10 +140,10 @@
             this.groupBox1.Font = new System.Drawing.Font("新細明體", 12F);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(741, 279);
+            this.groupBox1.Size = new System.Drawing.Size(761, 279);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "客戶基本資料";
+            this.groupBox1.Text = "供應商基本資料";
             // 
             // mailTextBox
             // 
@@ -245,7 +245,7 @@
             // 
             // mobileTextBox
             // 
-            this.mobileTextBox.Location = new System.Drawing.Point(308, 51);
+            this.mobileTextBox.Location = new System.Drawing.Point(331, 51);
             this.mobileTextBox.Name = "mobileTextBox";
             this.mobileTextBox.Size = new System.Drawing.Size(114, 27);
             this.mobileTextBox.TabIndex = 23;
@@ -259,14 +259,14 @@
             // 
             // shortnameTextBox
             // 
-            this.shortnameTextBox.Location = new System.Drawing.Point(641, 21);
+            this.shortnameTextBox.Location = new System.Drawing.Point(664, 21);
             this.shortnameTextBox.Name = "shortnameTextBox";
             this.shortnameTextBox.Size = new System.Drawing.Size(88, 27);
             this.shortnameTextBox.TabIndex = 21;
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(308, 21);
+            this.nameTextBox.Location = new System.Drawing.Point(331, 21);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(265, 27);
             this.nameTextBox.TabIndex = 20;
@@ -409,9 +409,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(223, 55);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 16);
+            this.label5.Size = new System.Drawing.Size(104, 16);
             this.label5.TabIndex = 4;
-            this.label5.Text = "手　　機：";
+            this.label5.Text = "手　　　機：";
             // 
             // label4
             // 
@@ -425,7 +425,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(579, 25);
+            this.label3.Location = new System.Drawing.Point(602, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 16);
             this.label3.TabIndex = 2;
@@ -436,18 +436,18 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(223, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 16);
+            this.label2.Size = new System.Drawing.Size(104, 16);
             this.label2.TabIndex = 1;
-            this.label2.Text = "客戶名稱：";
+            this.label2.Text = "供應商名稱：";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(9, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 16);
+            this.label1.Size = new System.Drawing.Size(104, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "客戶編號：";
+            this.label1.Text = "供應商編號：";
             // 
             // tableLayoutPanel1
             // 
@@ -456,13 +456,14 @@
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupBox2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 2);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68.1388F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.8612F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(747, 454);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(767, 454);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // groupBox2
@@ -482,7 +483,7 @@
             this.groupBox2.Font = new System.Drawing.Font("新細明體", 12F);
             this.groupBox2.Location = new System.Drawing.Point(3, 288);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(741, 127);
+            this.groupBox2.Size = new System.Drawing.Size(761, 127);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "開票資料";
@@ -598,7 +599,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(741, 30);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(761, 30);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // flowLayoutPanel1
@@ -611,9 +612,9 @@
             this.flowLayoutPanel1.Controls.Add(this.nextButton);
             this.flowLayoutPanel1.Controls.Add(this.lastButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(225, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(231, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(290, 24);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(298, 24);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // firstButton
@@ -690,10 +691,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 454);
+            this.ClientSize = new System.Drawing.Size(767, 454);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "CustomerForm";
-            this.Text = "客戶資料";
+            this.Text = "供應商資料";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
