@@ -146,6 +146,7 @@
             this.customerView.Name = "customerView";
             this.customerView.ReadOnly = true;
             this.customerView.RowTemplate.Height = 24;
+            this.customerView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.customerView.Size = new System.Drawing.Size(770, 476);
             this.customerView.TabIndex = 0;
             // 
@@ -163,26 +164,30 @@
             // addCustomerMenuItem
             // 
             this.addCustomerMenuItem.Name = "addCustomerMenuItem";
-            this.addCustomerMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.addCustomerMenuItem.Size = new System.Drawing.Size(152, 24);
             this.addCustomerMenuItem.Text = "新增資料";
+            this.addCustomerMenuItem.Click += new System.EventHandler(this.addCustomerMenuItem_Click);
             // 
             // editCustomerMenuItem
             // 
             this.editCustomerMenuItem.Name = "editCustomerMenuItem";
-            this.editCustomerMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.editCustomerMenuItem.Size = new System.Drawing.Size(152, 24);
             this.editCustomerMenuItem.Text = "修改資料";
+            this.editCustomerMenuItem.Click += new System.EventHandler(this.editCustomerMenuItem_Click);
             // 
             // delCustomerMenuItem
             // 
             this.delCustomerMenuItem.Name = "delCustomerMenuItem";
-            this.delCustomerMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.delCustomerMenuItem.Size = new System.Drawing.Size(152, 24);
             this.delCustomerMenuItem.Text = "刪除資料";
+            this.delCustomerMenuItem.Click += new System.EventHandler(this.delCustomerMenuItem_Click);
             // 
             // refreshCustomerMenuItem
             // 
             this.refreshCustomerMenuItem.Name = "refreshCustomerMenuItem";
-            this.refreshCustomerMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.refreshCustomerMenuItem.Size = new System.Drawing.Size(152, 24);
             this.refreshCustomerMenuItem.Text = "重新整理";
+            this.refreshCustomerMenuItem.Click += new System.EventHandler(this.refreshCustomerMenuItem_Click);
             // 
             // supplierPage
             // 
@@ -204,6 +209,7 @@
             this.supplierView.Name = "supplierView";
             this.supplierView.ReadOnly = true;
             this.supplierView.RowTemplate.Height = 24;
+            this.supplierView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.supplierView.Size = new System.Drawing.Size(770, 476);
             this.supplierView.TabIndex = 0;
             // 
@@ -221,26 +227,30 @@
             // addSupplierMenuItem
             // 
             this.addSupplierMenuItem.Name = "addSupplierMenuItem";
-            this.addSupplierMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.addSupplierMenuItem.Size = new System.Drawing.Size(152, 24);
             this.addSupplierMenuItem.Text = "新增資料";
+            this.addSupplierMenuItem.Click += new System.EventHandler(this.addSupplierMenuItem_Click);
             // 
             // editSupplierMenuItem
             // 
             this.editSupplierMenuItem.Name = "editSupplierMenuItem";
-            this.editSupplierMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.editSupplierMenuItem.Size = new System.Drawing.Size(152, 24);
             this.editSupplierMenuItem.Text = "修改資料";
+            this.editSupplierMenuItem.Click += new System.EventHandler(this.editSupplierMenuItem_Click);
             // 
             // delSupplierMenuItem
             // 
             this.delSupplierMenuItem.Name = "delSupplierMenuItem";
-            this.delSupplierMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.delSupplierMenuItem.Size = new System.Drawing.Size(152, 24);
             this.delSupplierMenuItem.Text = "刪除資料";
+            this.delSupplierMenuItem.Click += new System.EventHandler(this.delSupplierMenuItem_Click);
             // 
             // refreshSupplierMenuItem
             // 
             this.refreshSupplierMenuItem.Name = "refreshSupplierMenuItem";
-            this.refreshSupplierMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.refreshSupplierMenuItem.Size = new System.Drawing.Size(152, 24);
             this.refreshSupplierMenuItem.Text = "重新整理";
+            this.refreshSupplierMenuItem.Click += new System.EventHandler(this.refreshSupplierMenuItem_Click);
             // 
             // makingPage
             // 
@@ -261,6 +271,7 @@
             this.makingView.Name = "makingView";
             this.makingView.ReadOnly = true;
             this.makingView.RowTemplate.Height = 24;
+            this.makingView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.makingView.Size = new System.Drawing.Size(776, 482);
             this.makingView.TabIndex = 0;
             // 
@@ -278,26 +289,30 @@
             // addMakingMenuItem
             // 
             this.addMakingMenuItem.Name = "addMakingMenuItem";
-            this.addMakingMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.addMakingMenuItem.Size = new System.Drawing.Size(152, 24);
             this.addMakingMenuItem.Text = "新增資料";
+            this.addMakingMenuItem.Click += new System.EventHandler(this.addMakingMenuItem_Click);
             // 
             // editMakingMenuItem
             // 
             this.editMakingMenuItem.Name = "editMakingMenuItem";
-            this.editMakingMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.editMakingMenuItem.Size = new System.Drawing.Size(152, 24);
             this.editMakingMenuItem.Text = "修改資料";
+            this.editMakingMenuItem.Click += new System.EventHandler(this.editMakingMenuItem_Click);
             // 
             // delMakingMenuItem
             // 
             this.delMakingMenuItem.Name = "delMakingMenuItem";
-            this.delMakingMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.delMakingMenuItem.Size = new System.Drawing.Size(152, 24);
             this.delMakingMenuItem.Text = "刪除資料";
+            this.delMakingMenuItem.Click += new System.EventHandler(this.delMakingMenuItem_Click);
             // 
             // refreshMakingMenuItem
             // 
             this.refreshMakingMenuItem.Name = "refreshMakingMenuItem";
-            this.refreshMakingMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.refreshMakingMenuItem.Size = new System.Drawing.Size(152, 24);
             this.refreshMakingMenuItem.Text = "重新整理";
+            this.refreshMakingMenuItem.Click += new System.EventHandler(this.refreshMakingMenuItem_Click);
             // 
             // daomuPage
             // 
@@ -318,6 +333,7 @@
             this.daomuView.Name = "daomuView";
             this.daomuView.ReadOnly = true;
             this.daomuView.RowTemplate.Height = 24;
+            this.daomuView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.daomuView.Size = new System.Drawing.Size(776, 482);
             this.daomuView.TabIndex = 0;
             // 
@@ -330,31 +346,35 @@
             this.delDaomuMenuItem,
             this.refreshDaomuMenuItem});
             this.daomuMenu.Name = "customerMenu";
-            this.daomuMenu.Size = new System.Drawing.Size(143, 100);
+            this.daomuMenu.Size = new System.Drawing.Size(153, 122);
             // 
             // addDaomuMenuItem
             // 
             this.addDaomuMenuItem.Name = "addDaomuMenuItem";
-            this.addDaomuMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.addDaomuMenuItem.Size = new System.Drawing.Size(152, 24);
             this.addDaomuMenuItem.Text = "新增資料";
+            this.addDaomuMenuItem.Click += new System.EventHandler(this.addDaomuMenuItem_Click);
             // 
             // editDaomuMenuItem
             // 
             this.editDaomuMenuItem.Name = "editDaomuMenuItem";
-            this.editDaomuMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.editDaomuMenuItem.Size = new System.Drawing.Size(152, 24);
             this.editDaomuMenuItem.Text = "修改資料";
+            this.editDaomuMenuItem.Click += new System.EventHandler(this.editDaomuMenuItem_Click);
             // 
             // delDaomuMenuItem
             // 
             this.delDaomuMenuItem.Name = "delDaomuMenuItem";
-            this.delDaomuMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.delDaomuMenuItem.Size = new System.Drawing.Size(152, 24);
             this.delDaomuMenuItem.Text = "刪除資料";
+            this.delDaomuMenuItem.Click += new System.EventHandler(this.delDaomuMenuItem_Click);
             // 
             // refreshDaomuMenuItem
             // 
             this.refreshDaomuMenuItem.Name = "refreshDaomuMenuItem";
-            this.refreshDaomuMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.refreshDaomuMenuItem.Size = new System.Drawing.Size(152, 24);
             this.refreshDaomuMenuItem.Text = "重新整理";
+            this.refreshDaomuMenuItem.Click += new System.EventHandler(this.refreshDaomuMenuItem_Click);
             // 
             // menuStrip
             // 

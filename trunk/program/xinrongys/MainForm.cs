@@ -149,5 +149,154 @@ namespace xinrongys
                     break;
             }
         }
+
+        /// <summary>
+        /// 新增一筆客戶
+        /// </summary>
+        private void addCustomerMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 編輯客戶資料
+        /// </summary>
+        private void editCustomerMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 刪除客戶資料
+        /// </summary>
+        private void delCustomerMenuItem_Click(object sender, EventArgs e)
+        {
+            int index = customerView.SelectedRows[customerView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
+            if (index < customers.Count)
+            {
+                MessageBox.Show(customers[index]._Name);
+            }
+            
+        }
+
+        /// <summary>
+        /// 重新整理客戶頁面
+        /// </summary>
+        private void refreshCustomerMenuItem_Click(object sender, EventArgs e)
+        {
+            if (connect != null)
+            {
+                freshData("customer");
+                freshView("customer");
+            }
+        }
+
+        /// <summary>
+        /// 新增供應商資料
+        /// </summary>
+        private void addSupplierMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 修改供應商資料
+        /// </summary>
+        private void editSupplierMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 刪除供應商資料
+        /// </summary>
+        private void delSupplierMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 重新整理供應商資料
+        /// </summary>
+        private void refreshSupplierMenuItem_Click(object sender, EventArgs e)
+        {
+            if (connect != null)
+            {
+                freshData("supplier");
+                freshView("supplier");
+            }
+        }
+
+        /// <summary>
+        /// 新增材料資料
+        /// </summary>
+        private void addMakingMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 修改材料資料
+        /// </summary>
+        private void editMakingMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 刪除材料資料
+        /// </summary>
+        private void delMakingMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 重新整理材料資料
+        /// </summary>
+        private void refreshMakingMenuItem_Click(object sender, EventArgs e)
+        {
+            if (connect != null)
+            {
+                freshData("making");
+                freshView("making");
+            }
+        }
+
+        /// <summary>
+        /// 新增刀模資料
+        /// </summary>
+        private void addDaomuMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 修改刀模資料
+        /// </summary>
+        private void editDaomuMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 刪除刀模資料
+        /// </summary>
+        private void delDaomuMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 重新整理刀模資料
+        /// </summary>
+        private void refreshDaomuMenuItem_Click(object sender, EventArgs e)
+        {
+            if (connect != null)
+            {
+                freshData("daomu");
+                freshView("daomu");
+            }
+        }
     }
 }
