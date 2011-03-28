@@ -120,28 +120,28 @@ namespace xinrongys
                     customerView.Rows.Clear();
                     foreach(Customer c in customers)
                     {
-                        customerView.Rows.Add(c.getRow());
+                        customerView.Rows.Add(c.getRow().ToArray());
                     }
                     break;
                 case "supplier":
                     supplierView.Rows.Clear();
                     foreach (Supplier s in suppliers)
                     {
-                        supplierView.Rows.Add(s.getRow());
+                        supplierView.Rows.Add(s.getRow().ToArray());
                     }
                     break;
                 case "making":
                     makingView.Rows.Clear();
                     foreach (Making m in makings)
                     {
-                        makingView.Rows.Add(m.getRow());
+                        makingView.Rows.Add(m.getRow().ToArray());
                     }
                     break;
                 case "daomu":
                     daomuView.Rows.Clear();
                     foreach (Daomu d in daomus)
                     {
-                        daomuView.Rows.Add(d.getRow());
+                        daomuView.Rows.Add(d.getRow().ToArray());
                     }
                     break;
                 default:
