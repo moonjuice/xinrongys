@@ -80,6 +80,18 @@
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="dataClass\Daomu.cs" />
+    <Compile Include="dataClass\DaomuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dataClass\DaomuForm.Designer.cs">
+      <DependentUpon>DaomuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dataClass\MakingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dataClass\MakingForm.Designer.cs">
+      <DependentUpon>MakingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="dataClass\SupplierForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +112,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dataClass\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dataClass\DaomuForm.resx">
+      <DependentUpon>DaomuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dataClass\MakingForm.resx">
+      <DependentUpon>MakingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dataClass\SupplierForm.resx">
       <DependentUpon>SupplierForm.cs</DependentUpon>
