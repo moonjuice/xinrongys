@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace xinrongys.dataClass
 {
-    public partial class CustomerForm : Form
+    public partial class SupplierForm : Form
     {
-        public CustomerForm()
+        public SupplierForm()
         {
             InitializeComponent();
         }
