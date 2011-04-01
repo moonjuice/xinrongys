@@ -1,6 +1,6 @@
 ﻿namespace xinrongys.dataClass
 {
-    partial class CustomerForm
+    partial class SupplierForm
     {
         /// <summary>
         /// Required designer variable.

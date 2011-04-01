@@ -66,6 +66,10 @@ namespace xinrongys
             }
             return result;
         }
+        /// <summary>
+        /// 取得客戶資料集
+        /// </summary>
+        /// <returns>客戶資料集</returns>
         public List<Customer> getCustomers()
         {
             string sqlString = "select * from customer order by id desc";
@@ -94,6 +98,10 @@ namespace xinrongys
             }
             return cs;
         }
+        /// <summary>
+        /// 取得供應商資料集
+        /// </summary>
+        /// <returns>供應商資料集</returns>
         public List<Supplier> getSuppliers()
         {
             string sqlString = "select * from supplier order by id desc";
@@ -122,6 +130,10 @@ namespace xinrongys
             }
             return ss;            
         }
+        /// <summary>
+        /// 取得材料資料集
+        /// </summary>
+        /// <returns>材料資料集</returns>
         public List<Making> getMakings()
         {
             string sqlString = "select * from making order by id desc";
@@ -150,6 +162,10 @@ namespace xinrongys
             }
             return ms;
         }
+        /// <summary>
+        /// 取得刀模資料集
+        /// </summary>
+        /// <returns>刀模資料集</returns>
         public List<Daomu> getDaomus()
         {
             string sqlString = "select * from daomu order by id desc";
@@ -178,6 +194,7 @@ namespace xinrongys
             }
             return ds;
         }
+        #region 新增資料
         public bool add(Customer c)
         {
             bool result = false;
@@ -278,6 +295,171 @@ namespace xinrongys
             }
             return result;
         }
+        #endregion
+        #region 修改資料
+        public bool edit(Customer c)
+        {
+            bool result = false;
+            string addSQL = "UPDATE customer SET ";
+            for (int i=0;i<c.getSQLStruct().Count;i++)
+            {
+                addSQL = addSQL + c.getSQLStruct().ElementAt(i) + " = '"+c.getSQLData().ElementAt(i)+"',";
+            }
+            addSQL = addSQL.Substring(0,addSQL.Length-1);
+            addSQL = addSQL + " WHERE id = "+c._Id;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(addSQL, conn);
+                MySqlDataReader myData = cmd.ExecuteReader();
+                result = true;
+                myData.Close();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("錯誤代碼： " + ex.Number + "\n 錯誤訊息 : " + ex.Message);
+            }
+            return result;
+        }
+        public bool edit(Supplier s)
+        {
+            bool result = false;
+            string addSQL = "UPDATE supplier SET ";
+            for (int i = 0; i < s.getSQLStruct().Count; i++)
+            {
+                addSQL = addSQL + s.getSQLStruct().ElementAt(i) + " = '" + s.getSQLData().ElementAt(i) + "',";
+            }
+            addSQL = addSQL.Substring(0, addSQL.Length - 1);
+            addSQL = addSQL + " WHERE id = " + s._Id;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(addSQL, conn);
+                MySqlDataReader myData = cmd.ExecuteReader();
+                result = true;
+                myData.Close();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("錯誤代碼： " + ex.Number + "\n 錯誤訊息 : " + ex.Message);
+            }
+            return result;
+        }
+        public bool edit(Daomu d)
+        {
+            bool result = false;
+            string addSQL = "UPDATE daomu SET ";
+            for (int i = 0; i < d.getSQLStruct().Count; i++)
+            {
+                addSQL = addSQL + d.getSQLStruct().ElementAt(i) + " = '" + d.getSQLData().ElementAt(i) + "',";
+            }
+            addSQL = addSQL.Substring(0, addSQL.Length - 1);
+            addSQL = addSQL + " WHERE id = " + d._Id;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(addSQL, conn);
+                MySqlDataReader myData = cmd.ExecuteReader();
+                result = true;
+                myData.Close();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("錯誤代碼： " + ex.Number + "\n 錯誤訊息 : " + ex.Message);
+            }
+            return result;
+        }
+        public bool edit(Making m)
+        {
+            bool result = false;
+            string addSQL = "UPDATE making SET ";
+            for (int i = 0; i < m.getSQLStruct().Count; i++)
+            {
+                addSQL = addSQL + m.getSQLStruct().ElementAt(i) + " = '" + m.getSQLData().ElementAt(i) + "',";
+            }
+            addSQL = addSQL.Substring(0, addSQL.Length - 1);
+            addSQL = addSQL + " WHERE id = " + m._Id;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(addSQL, conn);
+                MySqlDataReader myData = cmd.ExecuteReader();
+                result = true;
+                myData.Close();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("錯誤代碼： " + ex.Number + "\n 錯誤訊息 : " + ex.Message);
+            }
+            return result;
+        }
+        #endregion
+        #region 刪除資料
+        public bool del(Customer c)
+        {
+            bool result = false;
+            string addSQL = "DELETE FROM customer WHERE id='"+c._Id+"'";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(addSQL, conn);
+                MySqlDataReader myData = cmd.ExecuteReader();
+                result = true;
+                myData.Close();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("錯誤代碼： " + ex.Number + "\n 錯誤訊息 : " + ex.Message);
+            }
+            return result;
+        }
+        public bool del(Supplier s)
+        {
+            bool result = false;
+            string addSQL = "DELETE FROM supplier WHERE id='" + s._Id + "'";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(addSQL, conn);
+                MySqlDataReader myData = cmd.ExecuteReader();
+                result = true;
+                myData.Close();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("錯誤代碼： " + ex.Number + "\n 錯誤訊息 : " + ex.Message);
+            }
+            return result;
+        }
+        public bool del(Daomu d)
+        {
+            bool result = false;
+            string addSQL = "DELETE FROM daomu WHERE id='" + d._Id + "'";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(addSQL, conn);
+                MySqlDataReader myData = cmd.ExecuteReader();
+                result = true;
+                myData.Close();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("錯誤代碼： " + ex.Number + "\n 錯誤訊息 : " + ex.Message);
+            }
+            return result;
+        }
+        public bool del(Making m)
+        {
+            bool result = false;
+            string addSQL = "DELETE FROM making WHERE id='" + m._Id + "'";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(addSQL, conn);
+                MySqlDataReader myData = cmd.ExecuteReader();
+                result = true;
+                myData.Close();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("錯誤代碼： " + ex.Number + "\n 錯誤訊息 : " + ex.Message);
+            }
+            return result;
+        }
+        #endregion
         #endregion
 
     }
