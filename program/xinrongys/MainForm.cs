@@ -156,8 +156,8 @@ namespace xinrongys
         private void addCustomerMenuItem_Click(object sender, EventArgs e)
         {
             //TODO
-            CustomerForm cs = new CustomerForm();
-            cs.Show();
+            CustomerForm cf = new CustomerForm();
+            cf.Show();
         }
 
         /// <summary>
@@ -166,8 +166,8 @@ namespace xinrongys
         private void editCustomerMenuItem_Click(object sender, EventArgs e)
         {
             //TODO
-            CustomerForm cs = new CustomerForm();
-            cs.Show();
+            CustomerForm cf = new CustomerForm();
+            cf.Show();
         }
 
         /// <summary>
@@ -182,7 +182,7 @@ namespace xinrongys
                 string caption = "刪除客戶資料";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result;
-                result = MessageBox.Show(message, caption, buttons);
+                result = MessageBox.Show(message, caption, buttons,MessageBoxIcon.Warning);
                 if (result == System.Windows.Forms.DialogResult.Yes)
                 {
                     if (connect.del(customers[index]))
@@ -207,11 +207,20 @@ namespace xinrongys
         }
 
         /// <summary>
+        /// 客戶基本資料視窗關閉要做的事情
+        /// </summary>
+        private void customerFormClosed(object sender, EventArgs e)
+        {
+            freshView("customer");
+        }
+
+        /// <summary>
         /// 新增供應商資料
         /// </summary>
         private void addSupplierMenuItem_Click(object sender, EventArgs e)
         {
-
+            SupplierForm sf = new SupplierForm();
+            sf.Show();
         }
 
         /// <summary>
@@ -219,7 +228,8 @@ namespace xinrongys
         /// </summary>
         private void editSupplierMenuItem_Click(object sender, EventArgs e)
         {
-
+            SupplierForm sf = new SupplierForm();
+            sf.Show();
         }
 
         /// <summary>
@@ -234,7 +244,7 @@ namespace xinrongys
                 string caption = "刪除供應商資料";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result;
-                result = MessageBox.Show(message, caption, buttons);
+                result = MessageBox.Show(message, caption, buttons, MessageBoxIcon.Warning);
                 if (result == System.Windows.Forms.DialogResult.Yes)
                 {
                     if (connect.del(suppliers[index]))
@@ -259,11 +269,20 @@ namespace xinrongys
         }
 
         /// <summary>
+        /// 供應商基本資料視窗關閉要做的事情
+        /// </summary>
+        private void supplierFormClosed(object sender, EventArgs e)
+        {
+            freshView("supplier");
+        }
+        
+        /// <summary>
         /// 新增材料資料
         /// </summary>
         private void addMakingMenuItem_Click(object sender, EventArgs e)
         {
-
+            MakingForm mf = new MakingForm();
+            mf.Show();
         }
 
         /// <summary>
@@ -271,7 +290,8 @@ namespace xinrongys
         /// </summary>
         private void editMakingMenuItem_Click(object sender, EventArgs e)
         {
-
+            MakingForm mf = new MakingForm();
+            mf.Show();
         }
 
         /// <summary>
@@ -286,7 +306,7 @@ namespace xinrongys
                 string caption = "刪除材料資料";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result;
-                result = MessageBox.Show(message, caption, buttons);
+                result = MessageBox.Show(message, caption, buttons, MessageBoxIcon.Warning);
                 if (result == System.Windows.Forms.DialogResult.Yes)
                 {
                     if (connect.del(makings[index]))
@@ -311,11 +331,20 @@ namespace xinrongys
         }
 
         /// <summary>
+        /// 材料基本資料視窗關閉要做的事情
+        /// </summary>
+        private void makingFormClosed(object sender, EventArgs e)
+        {
+            freshView("making");
+        }
+        
+        /// <summary>
         /// 新增刀模資料
         /// </summary>
         private void addDaomuMenuItem_Click(object sender, EventArgs e)
         {
-
+            DaomuForm df = new DaomuForm();
+            df.Show();
         }
 
         /// <summary>
@@ -323,7 +352,8 @@ namespace xinrongys
         /// </summary>
         private void editDaomuMenuItem_Click(object sender, EventArgs e)
         {
-
+            DaomuForm df = new DaomuForm();
+            df.Show();
         }
 
         /// <summary>
@@ -338,7 +368,7 @@ namespace xinrongys
                 string caption = "刪除刀模資料";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result;
-                result = MessageBox.Show(message, caption, buttons);
+                result = MessageBox.Show(message, caption, buttons, MessageBoxIcon.Warning);
                 if (result == System.Windows.Forms.DialogResult.Yes)
                 {
                     if (connect.del(daomus[index]))
@@ -360,6 +390,14 @@ namespace xinrongys
                 freshData("daomu");
                 freshView("daomu");
             }
+        }
+
+        /// <summary>
+        /// 刀模基本資料視窗關閉要做的事情
+        /// </summary>
+        private void daomuFormClosed(object sender, EventArgs e)
+        {
+            freshView("daomu");
         }
     }
 }
