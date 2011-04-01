@@ -1,4 +1,4 @@
-﻿namespace xinrongys.dataClass
+﻿namespace xinrongys
 {
     partial class SupplierForm
     {
