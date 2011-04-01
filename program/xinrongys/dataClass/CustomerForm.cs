@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace xinrongys.dataClass
+namespace xinrongys
 {
     public partial class CustomerForm : Form
     {

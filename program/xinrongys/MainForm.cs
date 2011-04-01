@@ -155,7 +155,9 @@ namespace xinrongys
         /// </summary>
         private void addCustomerMenuItem_Click(object sender, EventArgs e)
         {
-
+            //TODO
+            CustomerForm cs = new CustomerForm();
+            cs.Show();
         }
 
         /// <summary>
@@ -163,7 +165,9 @@ namespace xinrongys
         /// </summary>
         private void editCustomerMenuItem_Click(object sender, EventArgs e)
         {
-
+            //TODO
+            CustomerForm cs = new CustomerForm();
+            cs.Show();
         }
 
         /// <summary>
@@ -174,9 +178,20 @@ namespace xinrongys
             int index = customerView.SelectedRows[customerView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
             if (index < customers.Count)
             {
-                MessageBox.Show(customers[index]._Name);
-            }
-            
+                string message = "你確定要刪除客戶編號：" + customers[index]._Id + "，\n客戶名稱：" + customers[index]._Name + "這筆資料？";
+                string caption = "刪除客戶資料";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+                result = MessageBox.Show(message, caption, buttons);
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    if (connect.del(customers[index]))
+                    {
+                        customers.RemoveAt(index);
+                        freshView("customer");
+                    }
+                }
+            }            
         }
 
         /// <summary>
@@ -212,7 +227,23 @@ namespace xinrongys
         /// </summary>
         private void delSupplierMenuItem_Click(object sender, EventArgs e)
         {
-
+            int index = supplierView.SelectedRows[supplierView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
+            if (index < suppliers.Count)
+            {
+                string message = "你確定要刪除供應商編號：" + suppliers[index]._Id + "，\n供應商名稱：" + suppliers[index]._Name + "這筆資料？";
+                string caption = "刪除供應商資料";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+                result = MessageBox.Show(message, caption, buttons);
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    if (connect.del(suppliers[index]))
+                    {
+                        suppliers.RemoveAt(index);
+                        freshView("supplier");
+                    }
+                }
+            }
         }
 
         /// <summary>
@@ -248,7 +279,23 @@ namespace xinrongys
         /// </summary>
         private void delMakingMenuItem_Click(object sender, EventArgs e)
         {
-
+            int index = makingView.SelectedRows[makingView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
+            if (index < makings.Count)
+            {
+                string message = "你確定要刪除材料編號：" + makings[index]._Id + "，\n材料名稱：" + makings[index]._Name + "這筆資料？";
+                string caption = "刪除材料資料";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+                result = MessageBox.Show(message, caption, buttons);
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    if (connect.del(makings[index]))
+                    {
+                        makings.RemoveAt(index);
+                        freshView("making");
+                    }
+                }
+            }
         }
 
         /// <summary>
@@ -284,7 +331,23 @@ namespace xinrongys
         /// </summary>
         private void delDaomuMenuItem_Click(object sender, EventArgs e)
         {
-
+            int index = daomuView.SelectedRows[daomuView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
+            if (index < daomus.Count)
+            {
+                string message = "你確定要刪除刀模編號：" + daomus[index]._Id + "，\n刀模櫃號：" + daomus[index]._Cabinet + "這筆資料？";
+                string caption = "刪除刀模資料";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+                result = MessageBox.Show(message, caption, buttons);
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    if (connect.del(daomus[index]))
+                    {
+                        daomus.RemoveAt(index);
+                        freshView("daomu");
+                    }
+                }
+            }
         }
 
         /// <summary>
