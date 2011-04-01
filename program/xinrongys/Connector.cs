@@ -203,6 +203,81 @@ namespace xinrongys
             }
             return result;
         }
+        public bool add(Supplier s)
+        {
+            bool result = false;
+            string addSQL = "INSERT INTO supplier (";
+            foreach (string ss in s.getSQLStruct())
+                addSQL = addSQL + ss + ",";
+            addSQL = addSQL.Substring(0, addSQL.Length - 1);
+            addSQL = addSQL + ") VALUES (";
+            foreach (string ss in s.getSQLData())
+                addSQL = addSQL + "'" + ss + "',";
+            addSQL = addSQL.Substring(0, addSQL.Length - 1);
+            addSQL = addSQL + ")";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(addSQL, conn);
+                MySqlDataReader myData = cmd.ExecuteReader();
+                result = true;
+                myData.Close();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("錯誤代碼： " + ex.Number + "\n 錯誤訊息 : " + ex.Message);
+            }
+            return result;
+        }
+        public bool add(Daomu d)
+        {
+            bool result = false;
+            string addSQL = "INSERT INTO daomu (";
+            foreach (string s in d.getSQLStruct())
+                addSQL = addSQL + s + ",";
+            addSQL = addSQL.Substring(0, addSQL.Length - 1);
+            addSQL = addSQL + ") VALUES (";
+            foreach (string s in d.getSQLData())
+                addSQL = addSQL + "'" + s + "',";
+            addSQL = addSQL.Substring(0, addSQL.Length - 1);
+            addSQL = addSQL + ")";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(addSQL, conn);
+                MySqlDataReader myData = cmd.ExecuteReader();
+                result = true;
+                myData.Close();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("錯誤代碼： " + ex.Number + "\n 錯誤訊息 : " + ex.Message);
+            }
+            return result;
+        }
+        public bool add(Making m)
+        {
+            bool result = false;
+            string addSQL = "INSERT INTO making (";
+            foreach (string s in m.getSQLStruct())
+                addSQL = addSQL + s + ",";
+            addSQL = addSQL.Substring(0, addSQL.Length - 1);
+            addSQL = addSQL + ") VALUES (";
+            foreach (string s in m.getSQLData())
+                addSQL = addSQL + "'" + s + "',";
+            addSQL = addSQL.Substring(0, addSQL.Length - 1);
+            addSQL = addSQL + ")";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(addSQL, conn);
+                MySqlDataReader myData = cmd.ExecuteReader();
+                result = true;
+                myData.Close();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("錯誤代碼： " + ex.Number + "\n 錯誤訊息 : " + ex.Message);
+            }
+            return result;
+        }
         #endregion
 
     }
