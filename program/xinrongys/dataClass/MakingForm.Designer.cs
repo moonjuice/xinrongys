@@ -39,6 +39,9 @@
             this.lastButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.priceTextBox = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.cancelButton = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
             this.unitComboBox = new System.Windows.Forms.ComboBox();
             this.s_idTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,9 +53,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.typeComboBox = new System.Windows.Forms.ComboBox();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.saveButton = new System.Windows.Forms.Button();
-            this.cancelButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -194,6 +194,36 @@
             this.priceTextBox.Size = new System.Drawing.Size(172, 27);
             this.priceTextBox.TabIndex = 11;
             // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.cancelButton);
+            this.flowLayoutPanel2.Controls.Add(this.saveButton);
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(383, 93);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(172, 25);
+            this.flowLayoutPanel2.TabIndex = 1;
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cancelButton.Location = new System.Drawing.Point(94, 3);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(75, 23);
+            this.cancelButton.TabIndex = 1;
+            this.cancelButton.Text = "取消";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            // 
+            // saveButton
+            // 
+            this.saveButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.saveButton.Location = new System.Drawing.Point(13, 3);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(75, 23);
+            this.saveButton.TabIndex = 0;
+            this.saveButton.Text = "儲存";
+            this.saveButton.UseVisualStyleBackColor = true;
+            // 
             // unitComboBox
             // 
             this.unitComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -203,7 +233,7 @@
             "米",
             "卷",
             "公斤"});
-            this.unitComboBox.Location = new System.Drawing.Point(120, 65);
+            this.unitComboBox.Location = new System.Drawing.Point(120, 63);
             this.unitComboBox.Name = "unitComboBox";
             this.unitComboBox.Size = new System.Drawing.Size(140, 24);
             this.unitComboBox.TabIndex = 10;
@@ -312,41 +342,11 @@
             "膜類",
             "雙面膠類",
             "其他類"});
-            this.typeComboBox.Location = new System.Drawing.Point(120, 35);
+            this.typeComboBox.Location = new System.Drawing.Point(120, 33);
             this.typeComboBox.Name = "typeComboBox";
             this.typeComboBox.Size = new System.Drawing.Size(140, 24);
             this.typeComboBox.TabIndex = 8;
             this.typeComboBox.Text = "紙類";
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.cancelButton);
-            this.flowLayoutPanel2.Controls.Add(this.saveButton);
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(383, 93);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(172, 25);
-            this.flowLayoutPanel2.TabIndex = 1;
-            // 
-            // saveButton
-            // 
-            this.saveButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.saveButton.Location = new System.Drawing.Point(13, 3);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(75, 23);
-            this.saveButton.TabIndex = 0;
-            this.saveButton.Text = "儲存";
-            this.saveButton.UseVisualStyleBackColor = true;
-            // 
-            // cancelButton
-            // 
-            this.cancelButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cancelButton.Location = new System.Drawing.Point(94, 3);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(75, 23);
-            this.cancelButton.TabIndex = 1;
-            this.cancelButton.Text = "取消";
-            this.cancelButton.UseVisualStyleBackColor = true;
             // 
             // MakingForm
             // 
