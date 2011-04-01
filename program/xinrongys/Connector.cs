@@ -178,31 +178,31 @@ namespace xinrongys
             }
             return ds;
         }
-        //public List getRowDatas(string tableName)
-        //{
-        //    string sqlString = "select * from " + tableName + " order by id desc"; 
-        //    switch (tableName)
-        //    {
-        //        case "customer":
-        //            #region 讀取客戶資料
-                    
-        //            #endregion
-        //        case "supplier":
-        //            #region 讀取供應商資料
-                    
-        //            #endregion
-        //        case "making":
-        //            #region 讀取材料資料
-                    
-        //            #endregion                    
-        //        case "daomu":
-        //            #region 讀取刀模資料
-                    
-        //            #endregion
-        //        default:
-        //            return null;
-        //    }
-        //}
+        public bool add(Customer c)
+        {
+            bool result = false;
+            string addSQL = "INSERT INTO customer (";
+            foreach (string s in c.getSQLStruct())
+                addSQL = addSQL + s + ",";
+            addSQL = addSQL.Substring(0, addSQL.Length - 1);
+            addSQL = addSQL + ") VALUES (";
+            foreach (string s in c.getSQLData())
+                addSQL = addSQL + "'" + s + "',";
+            addSQL = addSQL.Substring(0, addSQL.Length - 1);
+            addSQL = addSQL + ")";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(addSQL, conn);
+                MySqlDataReader myData = cmd.ExecuteReader();
+                result = true;
+                myData.Close();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("錯誤代碼： " + ex.Number + "\n 錯誤訊息 : " + ex.Message);
+            }
+            return result;
+        }
         #endregion
 
     }

@@ -207,6 +207,58 @@ namespace xinrongys
             column.Add(this.mobile.ToString());
             return column;
         }
+        public List<string> getSQLStruct()
+        {
+            List<string> column = new List<string>();
+            column.Add("id");
+            column.Add("name");
+            column.Add("shortname");
+            column.Add("contacter");
+            column.Add("mobile");
+            column.Add("phone1");
+            column.Add("ext1");
+            column.Add("phone2");
+            column.Add("ext2");
+            column.Add("province");
+            column.Add("city");
+            column.Add("town");
+            column.Add("village");
+            column.Add("district");
+            column.Add("zone");
+            column.Add("addr");
+            column.Add("mail");
+            column.Add("b_name");
+            column.Add("b_account");
+            column.Add("day");
+            column.Add("currency");
+            return column;
+        }
+        public List<string> getSQLData()
+        {
+            List<string> column = new List<string>();
+            column.Add(this.id);
+            column.Add(this.name);
+            column.Add(this.shortname);
+            column.Add(this.contacter);
+            column.Add(this.mobile.ToString());
+            column.Add(this.phone1);
+            column.Add(this.ext1.ToString());
+            column.Add(this.phone2);
+            column.Add(this.ext2.ToString());
+            column.Add(this.province);
+            column.Add(this.city);
+            column.Add(this.town);
+            column.Add(this.village);
+            column.Add(this.district);
+            column.Add(this.zone);
+            column.Add(this.addr);
+            column.Add(this.mail);
+            column.Add(this.b_name);
+            column.Add(this.b_account);
+            column.Add(this.day.ToString());
+            column.Add(this.currency);
+            return column;
+        }
         #endregion
     }
     #endregion

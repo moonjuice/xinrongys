@@ -83,6 +83,28 @@ namespace xinrongys
             column.Add(this.name);
             return column;
         }
+        public List<string> getSQLStruct()
+        {
+            List<string> column = new List<string>();
+            column.Add("id");
+            column.Add("name");
+            column.Add("s_id");
+            column.Add("type");
+            column.Add("unit");
+            column.Add("price");
+            return column;
+        }
+        public List<string> getSQLData()
+        {
+            List<string> column = new List<string>();
+            column.Add(this.id);
+            column.Add(this.name);
+            column.Add(this.s_id);
+            column.Add(this.type);
+            column.Add(this.unit);
+            column.Add(this.price.ToString());
+            return column;
+        }
         #endregion
     }
     #endregion
