@@ -23,6 +23,13 @@ namespace xinrongys
             this.navBarPanel.Visible = true;
             this.pageCount.Text = " / " + customers.Count;
             showData();
+            if (customers.Count == 1)
+            {
+                this.firstButton.Enabled = false;
+                this.preButton.Enabled = false;
+                this.lastButton.Enabled = false;
+                this.nextButton.Enabled = false;
+            }
         }
        
         public CustomerForm()
@@ -137,7 +144,7 @@ namespace xinrongys
             }
             else
             {
-                if (this.connect.edit(c))
+                if (this.connect.edit(c,this.customers.ElementAt(index)))
                 {
                     MessageBox.Show("修改資料成功!!");
                     this.customers.RemoveAt(index);
@@ -254,7 +261,7 @@ namespace xinrongys
                         this.preButton.Enabled = false;
                         this.firstButton.Enabled = false;
                     }
-                    else if (this.index == customers.Count - 1)
+                    if (this.index == customers.Count - 1)
                     {
                         this.nextButton.Enabled = false;
                         this.lastButton.Enabled = false;

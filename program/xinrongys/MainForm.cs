@@ -15,6 +15,7 @@ namespace xinrongys
         private ConnectForm cnf;
         private CustomerForm cf;
         private SupplierForm sf;
+        private DaomuForm df;
         private List<Customer> customers = new List<Customer>();
         private List<Supplier> suppliers = new List<Supplier>();
         private List<Making> makings = new List<Making>();
@@ -367,7 +368,10 @@ namespace xinrongys
         /// </summary>
         private void addDaomuMenuItem_Click(object sender, EventArgs e)
         {
-            DaomuForm df = new DaomuForm();
+            df = new DaomuForm();
+            df.Connect = this.connect;
+            df.Daomus = this.daomus;
+            df.FormClosed += new FormClosedEventHandler(df_FormClosed);
             df.Show();
         }
 
@@ -376,8 +380,16 @@ namespace xinrongys
         /// </summary>
         private void editDaomuMenuItem_Click(object sender, EventArgs e)
         {
-            DaomuForm df = new DaomuForm();
-            df.Show();
+            int index = daomuView.SelectedRows[daomuView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
+            if (index < daomus.Count)
+            {
+                df = new DaomuForm();
+                df.Connect = this.connect;
+                df.Daomus = this.daomus;
+                df.setIndex(index);
+                df.FormClosed += new FormClosedEventHandler(df_FormClosed);
+                df.Show();
+            }
         }
 
         /// <summary>
@@ -419,8 +431,9 @@ namespace xinrongys
         /// <summary>
         /// 刀模基本資料視窗關閉要做的事情
         /// </summary>
-        private void daomuFormClosed(object sender, EventArgs e)
+        private void df_FormClosed(object sender, EventArgs e)
         {
+            this.daomus = df.Daomus;
             freshView("daomu");
         }
     }
