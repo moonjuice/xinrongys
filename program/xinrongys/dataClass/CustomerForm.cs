@@ -13,26 +13,23 @@ namespace xinrongys
     {
         private Connector connect = null;
         private List<Customer> customers = null;
-        private bool isAdd = true;
+        private bool isEdit = false;
+        private int index=0;
 
-        public void setState(bool isAdd)
+        public void setIndex(int i)
         {
-            this.isAdd = isAdd;
-            if (isAdd)
-            {
-                this.enterButton.Text = "新增";
-                this.navBarPanel.Visible = false;
-            }
-            else
-            {
-                this.enterButton.Text = "修改";
-                this.navBarPanel.Visible = true;
-            }
+            this.isEdit = true;
+            this.enterButton.Text = "修改";
+            this.navBarPanel.Visible = true;
+            this.pageCount.Text = " / " + customers.Count;
+            showData();
         }
        
         public CustomerForm()
         {
             InitializeComponent();
+            this.enterButton.Text = "新增";
+            this.navBarPanel.Visible = false;
         }
         public Connector Connect
         {
@@ -72,6 +69,34 @@ namespace xinrongys
             pageTextBox.Text = "";
         }
 
+        private void showData()
+        {
+            Customer c = customers.ElementAt(index);
+            shortnameTextBox.Text = c._Shortname;
+            nameTextBox.Text = c._Name;
+            idTextBox.Text = c._Id;
+            contacterTextBox.Text = c._Contacter;
+            mobileTextBox.Text = c._Mobile.ToString();
+            phone1TextBox.Text = c._Phone1;
+            ext1TextBox.Text = c._Ext1.ToString();
+            ext2TextBox.Text = c._Ext2.ToString();
+            phone2TextBox.Text = c._Phone2;
+            ext3TextBox.Text = c._Ext3.ToString();
+            faxTextBox.Text = c._Fax;
+            villageTextBox.Text = c._Village;
+            townTextBox.Text = c._Town;
+            cityTextBox.Text = c._City;
+            provinceTextBox.Text = c._Province;
+            mailTextBox.Text = c._Mail;
+            addrTextBox.Text = c._Addr;
+            zoneTextBox.Text = c._Zone;
+            districtTextBox.Text = c._District;
+            dayTextBox.Text = c._Day.ToString();
+            b_accountTextBox.Text = c._B_account;
+            b_nameTextBox.Text = c._B_name;
+            this.pageTextBox.Text = (this.index+1).ToString();
+        }
+
         /// <summary>
         /// 新增或是修改資料
         /// </summary>
@@ -101,11 +126,27 @@ namespace xinrongys
             c._Town = townTextBox.Text;
             c._Village = villageTextBox.Text;
             c._Zone = zoneTextBox.Text;
-            if (this.connect.add(c))
+            if (!this.isEdit)
             {
-                //新增資料成功
-                this.customers.Add(c);
-                reset();
+                if (this.connect.add(c))
+                {
+                    MessageBox.Show("新增資料成功!!");
+                    this.customers.Add(c);
+                    reset();
+                }
+            }
+            else
+            {
+                if (this.connect.edit(c))
+                {
+                    MessageBox.Show("修改資料成功!!");
+                    this.customers.RemoveAt(index);
+                    this.customers.Insert(index, c);
+                }
+                else
+                {
+                    showData();
+                }
             }
         }
 
@@ -128,7 +169,12 @@ namespace xinrongys
         /// <returns></returns>
         private void firstButton_Click(object sender, EventArgs e)
         {
-            //TODO
+            this.index = 0;
+            showData();
+            this.firstButton.Enabled = false;
+            this.preButton.Enabled = false;
+            this.lastButton.Enabled = true;
+            this.nextButton.Enabled = true;
         }
 
         /// <summary>
@@ -139,7 +185,15 @@ namespace xinrongys
         /// <returns></returns>
         private void preButton_Click(object sender, EventArgs e)
         {
-            //TODO
+            this.index = this.index - 1;
+            showData();
+            if (this.index == 0)
+            {
+                this.preButton.Enabled = false;
+                this.firstButton.Enabled = false;
+            }
+            this.nextButton.Enabled = true;
+            this.lastButton.Enabled = true;
         }
 
         /// <summary>
@@ -150,7 +204,15 @@ namespace xinrongys
         /// <returns></returns>
         private void nextButton_Click(object sender, EventArgs e)
         {
-            //TODO
+            this.index = this.index + 1;
+            showData();
+            if (this.index == customers.Count - 1)
+            {
+                this.nextButton.Enabled = false;
+                this.lastButton.Enabled = false;
+            }
+            this.preButton.Enabled = true;
+            this.firstButton.Enabled = true;
         }
 
         /// <summary>
@@ -161,7 +223,12 @@ namespace xinrongys
         /// <returns></returns>
         private void lastButton_Click(object sender, EventArgs e)
         {
-            //TODO
+            this.index = customers.Count-1;
+            showData();
+            this.lastButton.Enabled = false;
+            this.preButton.Enabled = true;
+            this.firstButton.Enabled = true;
+            this.nextButton.Enabled = false;
         }
 
         /// <summary>
@@ -172,7 +239,32 @@ namespace xinrongys
         /// <returns></returns>
         private void pageTextBox_TextChanged(object sender, EventArgs e)
         {
-            //TODO
+            if (this.pageTextBox.Text != null && !this.pageTextBox.Text.Equals(""))
+            {
+                if (Convert.ToDecimal(this.pageTextBox.Text) > 0 && Convert.ToDecimal(this.pageTextBox.Text) <= customers.Count)
+                {
+                    this.index = ((int)Convert.ToDecimal(this.pageTextBox.Text)) - 1;
+                    showData();
+                    this.preButton.Enabled = true;
+                    this.firstButton.Enabled = true;
+                    this.nextButton.Enabled = true;
+                    this.lastButton.Enabled = true;
+                    if (this.index == 0)
+                    {
+                        this.preButton.Enabled = false;
+                        this.firstButton.Enabled = false;
+                    }
+                    else if (this.index == customers.Count - 1)
+                    {
+                        this.nextButton.Enabled = false;
+                        this.lastButton.Enabled = false;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("請輸入1~" + customers.Count.ToString() + "!!");
+                }
+            }
         }
     }
 }
