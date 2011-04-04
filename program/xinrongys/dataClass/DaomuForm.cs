@@ -199,5 +199,37 @@ namespace xinrongys
             this.firstButton.Enabled = true;
             this.nextButton.Enabled = false;
         }
+
+        private void d_longTextBox_TextChanged(object sender, EventArgs e)
+        {
+            this.textBox6.Text = this.d_longTextBox.Text;
+        }
+
+        private void d_widthTextBox_TextChanged(object sender, EventArgs e)
+        {
+            this.textBox7.Text = this.d_widthTextBox.Text;
+        }
+
+        private void l_mTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (l_mTextBox.Text != null && !l_mTextBox.Text.Equals("") && w_mTextBox.Text != null && !w_mTextBox.Text.Equals(""))
+            {
+                if (Convert.ToDecimal(l_mTextBox.Text) < 1 || Convert.ToDecimal(l_mTextBox.Text) > 999)
+                    MessageBox.Show("請輸入1~999!!");
+                else
+                    this.textBox10.Text = (Convert.ToDecimal(l_mTextBox.Text) * Convert.ToDecimal(w_mTextBox.Text)).ToString();
+            }
+        }
+
+        private void w_mTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (l_mTextBox.Text != null && !l_mTextBox.Text.Equals("") && w_mTextBox.Text != null && !w_mTextBox.Text.Equals(""))
+            {
+                if (Convert.ToDecimal(w_mTextBox.Text) < 1 || Convert.ToDecimal(w_mTextBox.Text) > 999)
+                    MessageBox.Show("請輸入1~999!!");
+                else
+                    this.textBox10.Text = (Convert.ToDecimal(l_mTextBox.Text) * Convert.ToDecimal(w_mTextBox.Text)).ToString();
+            }
+        }
     }
 }

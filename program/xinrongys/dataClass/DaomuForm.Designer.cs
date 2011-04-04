@@ -295,6 +295,7 @@
             this.l_mTextBox.Name = "l_mTextBox";
             this.l_mTextBox.Size = new System.Drawing.Size(94, 27);
             this.l_mTextBox.TabIndex = 5;
+            this.l_mTextBox.TextChanged += new System.EventHandler(this.l_mTextBox_TextChanged);
             // 
             // label10
             // 
@@ -394,6 +395,7 @@
             this.w_mTextBox.Name = "w_mTextBox";
             this.w_mTextBox.Size = new System.Drawing.Size(94, 27);
             this.w_mTextBox.TabIndex = 11;
+            this.w_mTextBox.TextChanged += new System.EventHandler(this.w_mTextBox_TextChanged);
             // 
             // label16
             // 
@@ -593,6 +595,7 @@
             this.d_widthTextBox.Name = "d_widthTextBox";
             this.d_widthTextBox.Size = new System.Drawing.Size(101, 27);
             this.d_widthTextBox.TabIndex = 5;
+            this.d_widthTextBox.TextChanged += new System.EventHandler(this.d_widthTextBox_TextChanged);
             // 
             // label6
             // 
@@ -650,6 +653,7 @@
             this.d_longTextBox.Name = "d_longTextBox";
             this.d_longTextBox.Size = new System.Drawing.Size(109, 27);
             this.d_longTextBox.TabIndex = 4;
+            this.d_longTextBox.TextChanged += new System.EventHandler(this.d_longTextBox_TextChanged);
             // 
             // flowLayoutPanel2
             // 
