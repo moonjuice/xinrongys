@@ -70,7 +70,7 @@
             this.hostLabel.Location = new System.Drawing.Point(3, 12);
             this.hostLabel.Name = "hostLabel";
             this.hostLabel.Size = new System.Drawing.Size(104, 16);
-            this.hostLabel.TabIndex = 0;
+            this.hostLabel.TabIndex = 4;
             this.hostLabel.Text = "資料庫網址：";
             // 
             // nameLabel
@@ -81,7 +81,7 @@
             this.nameLabel.Location = new System.Drawing.Point(3, 52);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(104, 16);
-            this.nameLabel.TabIndex = 1;
+            this.nameLabel.TabIndex = 5;
             this.nameLabel.Text = "使用者名稱：";
             // 
             // passwordLabel
@@ -92,7 +92,7 @@
             this.passwordLabel.Location = new System.Drawing.Point(3, 92);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(104, 16);
-            this.passwordLabel.TabIndex = 2;
+            this.passwordLabel.TabIndex = 6;
             this.passwordLabel.Text = "密            碼：";
             this.passwordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -103,7 +103,7 @@
             this.hostTextBox.Location = new System.Drawing.Point(113, 6);
             this.hostTextBox.Name = "hostTextBox";
             this.hostTextBox.Size = new System.Drawing.Size(168, 27);
-            this.hostTextBox.TabIndex = 3;
+            this.hostTextBox.TabIndex = 0;
             // 
             // enterButton
             // 
@@ -111,7 +111,7 @@
             this.enterButton.Location = new System.Drawing.Point(113, 127);
             this.enterButton.Name = "enterButton";
             this.enterButton.Size = new System.Drawing.Size(68, 27);
-            this.enterButton.TabIndex = 0;
+            this.enterButton.TabIndex = 3;
             this.enterButton.Text = "連線";
             this.enterButton.UseVisualStyleBackColor = true;
             this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
@@ -123,7 +123,7 @@
             this.nameTextBox.Location = new System.Drawing.Point(113, 46);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(168, 27);
-            this.nameTextBox.TabIndex = 4;
+            this.nameTextBox.TabIndex = 1;
             // 
             // passwordTextBox
             // 
@@ -133,7 +133,7 @@
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '●';
             this.passwordTextBox.Size = new System.Drawing.Size(168, 27);
-            this.passwordTextBox.TabIndex = 5;
+            this.passwordTextBox.TabIndex = 2;
             // 
             // ConnectForm
             // 

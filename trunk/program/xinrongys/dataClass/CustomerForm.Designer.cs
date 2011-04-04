@@ -81,7 +81,7 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.navBarPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.firstButton = new System.Windows.Forms.Button();
             this.preButton = new System.Windows.Forms.Button();
             this.pageTextBox = new System.Windows.Forms.TextBox();
@@ -93,7 +93,7 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.navBarPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -592,7 +592,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel1, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.navBarPanel, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 421);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -601,20 +601,20 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(741, 30);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
-            // flowLayoutPanel1
+            // navBarPanel
             // 
-            this.flowLayoutPanel1.Controls.Add(this.firstButton);
-            this.flowLayoutPanel1.Controls.Add(this.preButton);
-            this.flowLayoutPanel1.Controls.Add(this.pageTextBox);
-            this.flowLayoutPanel1.Controls.Add(this.label25);
-            this.flowLayoutPanel1.Controls.Add(this.totalLabel);
-            this.flowLayoutPanel1.Controls.Add(this.nextButton);
-            this.flowLayoutPanel1.Controls.Add(this.lastButton);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(225, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(290, 24);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.navBarPanel.Controls.Add(this.firstButton);
+            this.navBarPanel.Controls.Add(this.preButton);
+            this.navBarPanel.Controls.Add(this.pageTextBox);
+            this.navBarPanel.Controls.Add(this.label25);
+            this.navBarPanel.Controls.Add(this.totalLabel);
+            this.navBarPanel.Controls.Add(this.nextButton);
+            this.navBarPanel.Controls.Add(this.lastButton);
+            this.navBarPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navBarPanel.Location = new System.Drawing.Point(225, 3);
+            this.navBarPanel.Name = "navBarPanel";
+            this.navBarPanel.Size = new System.Drawing.Size(290, 24);
+            this.navBarPanel.TabIndex = 0;
             // 
             // firstButton
             // 
@@ -700,8 +700,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
+            this.navBarPanel.ResumeLayout(false);
+            this.navBarPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -761,7 +761,7 @@
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button enterButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel navBarPanel;
         private System.Windows.Forms.Button firstButton;
         private System.Windows.Forms.TextBox pageTextBox;
         private System.Windows.Forms.Label label25;
