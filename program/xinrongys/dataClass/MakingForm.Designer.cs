@@ -234,6 +234,7 @@
             // unitComboBox
             // 
             this.unitComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.unitComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.unitComboBox.Font = new System.Drawing.Font("新細明體", 12F);
             this.unitComboBox.FormattingEnabled = true;
             this.unitComboBox.Items.AddRange(new object[] {
@@ -244,7 +245,6 @@
             this.unitComboBox.Name = "unitComboBox";
             this.unitComboBox.Size = new System.Drawing.Size(140, 24);
             this.unitComboBox.TabIndex = 10;
-            this.unitComboBox.Text = "米";
             // 
             // s_idTextBox
             // 
@@ -342,6 +342,7 @@
             // typeComboBox
             // 
             this.typeComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.typeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.typeComboBox.Font = new System.Drawing.Font("新細明體", 12F);
             this.typeComboBox.FormattingEnabled = true;
             this.typeComboBox.Items.AddRange(new object[] {
@@ -353,7 +354,6 @@
             this.typeComboBox.Name = "typeComboBox";
             this.typeComboBox.Size = new System.Drawing.Size(140, 24);
             this.typeComboBox.TabIndex = 8;
-            this.typeComboBox.Text = "紙類";
             // 
             // MakingForm
             // 

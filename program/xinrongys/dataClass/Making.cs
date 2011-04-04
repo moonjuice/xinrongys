@@ -14,8 +14,8 @@ namespace xinrongys
         protected string id;
         protected string name;
         protected string s_id;
-        protected string type;
-        protected string unit;
+        protected int type;
+        protected int unit;
         protected int price;
         #endregion
         #region Constructors
@@ -25,11 +25,11 @@ namespace xinrongys
             this.id = myData.GetString(0);
             this.name = myData.GetString(1);
             this.s_id = myData.GetString(2);
-            this.type = myData.GetString(3);
-            this.unit = myData.GetString(4);
+            this.type = (int)myData.GetDecimal(3);
+            this.unit = (int)myData.GetDecimal(4);
             this.price = (int)myData.GetDecimal(5);
         }
-        public Making(string name, string s_id, string type, string unit, int price)
+        public Making(string name, string s_id, int type, int unit, int price)
         {
             this.name = name;
             this.s_id = s_id;
@@ -54,12 +54,12 @@ namespace xinrongys
             get { return s_id; }
             set { s_id = value; }
         }
-        public virtual string _Type
+        public virtual int _Type
         {
             get { return type; }
             set { type = value; }
         }
-        public virtual string _Unit
+        public virtual int _Unit
         {
             get { return unit; }
             set { unit = value; }
@@ -100,8 +100,8 @@ namespace xinrongys
             column.Add(this.id);
             column.Add(this.name);
             column.Add(this.s_id);
-            column.Add(this.type);
-            column.Add(this.unit);
+            column.Add(this.type.ToString());
+            column.Add(this.unit.ToString());
             column.Add(this.price.ToString());
             return column;
         }
