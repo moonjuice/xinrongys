@@ -510,6 +510,7 @@
             // 
             // currencyBox
             // 
+            this.currencyBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.currencyBox.FormattingEnabled = true;
             this.currencyBox.Items.AddRange(new object[] {
             "人民幣",
@@ -519,7 +520,6 @@
             this.currencyBox.Name = "currencyBox";
             this.currencyBox.Size = new System.Drawing.Size(139, 24);
             this.currencyBox.TabIndex = 42;
-            this.currencyBox.Text = "人民幣";
             // 
             // label24
             // 
