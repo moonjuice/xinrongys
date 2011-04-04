@@ -31,6 +31,8 @@ namespace xinrongys
             InitializeComponent();
             this.enterButton.Text = "新增";
             this.navBarPanel.Visible = false;
+            this.unitComboBox.SelectedIndex = 0;
+            this.typeComboBox.SelectedIndex = 0;
         }
         public void setIndex(int i)
         {
@@ -64,9 +66,9 @@ namespace xinrongys
             Making m = makings.ElementAt(index);
             this.idTextBox.Text = m._Id;
             this.nameTextBox.Text = m._Name;
-            this.typeComboBox.Text = m._Type;
+            this.typeComboBox.SelectedIndex = m._Type;
             this.s_idTextBox.Text = m._S_id;
-            this.unitComboBox.Text = m._Unit;
+            this.unitComboBox.SelectedIndex = m._Unit;
             this.priceTextBox.Text = m._Price.ToString();
             this.pageTextBox.Text = (index + 1).ToString();
         }
@@ -78,8 +80,8 @@ namespace xinrongys
             m._Name = this.nameTextBox.Text;
             m._Price = (int)Convert.ToDecimal(this.priceTextBox.Text);
             m._S_id = this.s_idTextBox.Text;
-            m._Type = this.typeComboBox.Text;
-            m._Unit = this.unitComboBox.Text;
+            m._Type = this.typeComboBox.SelectedIndex;
+            m._Unit = this.unitComboBox.SelectedIndex;
             if (!this.isEdit)
             {
                 if (this.connect.add(m))
