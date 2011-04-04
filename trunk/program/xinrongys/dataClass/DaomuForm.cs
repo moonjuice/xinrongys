@@ -40,6 +40,7 @@ namespace xinrongys
             this.enterButton.Text = "修改";
             this.navBarPanel.Visible = true;
             this.pageCount.Text = " / " + daomus.Count;
+            this.index = i;
             showData();
             if (daomus.Count == 1)
             {

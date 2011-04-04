@@ -16,6 +16,7 @@ namespace xinrongys
         private CustomerForm cf;
         private SupplierForm sf;
         private DaomuForm df;
+        private MakingForm mf;
         private List<Customer> customers = new List<Customer>();
         private List<Supplier> suppliers = new List<Supplier>();
         private List<Making> makings = new List<Making>();
@@ -306,7 +307,10 @@ namespace xinrongys
         /// </summary>
         private void addMakingMenuItem_Click(object sender, EventArgs e)
         {
-            MakingForm mf = new MakingForm();
+            mf = new MakingForm();
+            mf.Connect = this.connect;
+            mf.Makings = this.makings;
+            mf.FormClosed += new FormClosedEventHandler(mf_FormClosed);
             mf.Show();
         }
 
@@ -315,8 +319,16 @@ namespace xinrongys
         /// </summary>
         private void editMakingMenuItem_Click(object sender, EventArgs e)
         {
-            MakingForm mf = new MakingForm();
-            mf.Show();
+            int index = makingView.SelectedRows[makingView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
+            if (index < makings.Count)
+            {
+                mf = new MakingForm();
+                mf.Connect = this.connect;
+                mf.Makings = this.makings;
+                mf.setIndex(index);
+                mf.FormClosed += new FormClosedEventHandler(mf_FormClosed);
+                mf.Show();
+            }            
         }
 
         /// <summary>
@@ -358,8 +370,9 @@ namespace xinrongys
         /// <summary>
         /// 材料基本資料視窗關閉要做的事情
         /// </summary>
-        private void makingFormClosed(object sender, EventArgs e)
+        private void mf_FormClosed(object sender, EventArgs e)
         {
+            this.makings = mf.Makings;
             freshView("making");
         }
         
