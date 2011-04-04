@@ -32,6 +32,8 @@ namespace xinrongys
         protected string b_account;
         protected int day;
         protected string currency;
+        protected string fax;
+        protected int ext3;
         #endregion
         #region Constructors
         public Supplier() { }
@@ -58,8 +60,10 @@ namespace xinrongys
             this.b_account = myData.GetString(18);
             this.day = (int)myData.GetDecimal(19);
             this.currency = myData.GetString(20);
+            this.fax = myData.GetString(21);
+            this.ext3 = (int)myData.GetDecimal(22);
         }
-        public Supplier(string name, string shortname, string contacter, int mobile, string phone1, int ext1, string phone2, int ext2, string province, string city, string town, string village, string district, string zone, string addr, string mail, string b_name, string b_account, int day, string currency)
+        public Supplier(string name, string shortname, string contacter, int mobile, string phone1, int ext1, string phone2, int ext2, string province, string city, string town, string village, string district, string zone, string addr, string mail, string b_name, string b_account, int day, string currency,string fax,int ext3)
         {
             this.name = name;
             this.shortname = shortname;
@@ -81,6 +85,8 @@ namespace xinrongys
             this.b_account = b_account;
             this.day = day;
             this.currency = currency;
+            this.fax = fax;
+            this.ext3 = ext3;
         }
         #endregion
         #region Public Properties
@@ -189,6 +195,16 @@ namespace xinrongys
             get { return currency; }
             set { currency = value; }
         }
+        public virtual string _Fax
+        {
+            get { return _fax; }
+            set { _fax = value; }
+        }
+        public virtual int _Ext3
+        {
+            get { return ext3; }
+            set { ext3 = value; }
+        }
         static public List<string> getColumnHeader()
         {
             List<string> header = new List<string>();
@@ -231,6 +247,8 @@ namespace xinrongys
             column.Add("b_account");
             column.Add("day");
             column.Add("currency");
+            column.Add("fax");
+            column.Add("ext3");
             return column;
         }
         public List<string> getSQLData()
@@ -257,6 +275,8 @@ namespace xinrongys
             column.Add(this.b_account);
             column.Add(this.day.ToString());
             column.Add(this.currency);
+            column.Add(this.fax);
+            column.Add(this.ext3);
             return column;
         }
         #endregion
