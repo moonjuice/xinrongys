@@ -32,6 +32,8 @@ namespace xinrongys
         protected string b_account;
         protected int day;
         protected string currency;
+        protected string fax;
+        protected int ext3;
         #endregion
         #region Constructors
         public Customer() { }
@@ -58,6 +60,8 @@ namespace xinrongys
             this.b_account = myData.GetString(18);
             this.day = (int)myData.GetDecimal(19);
             this.currency = myData.GetString(20);
+            this.fax = myData.GetString(21);
+            this.ext3 = (int)myData.GetDecimal(22);
         }
         public Customer(string id,string name, string shortname, string contacter, int mobile, string phone1, int ext1, string phone2, int ext2, string province, string city, string town, string village, string district, string zone, string addr, string mail, string b_name, string b_account, int day, string currency)
         {
@@ -130,6 +134,11 @@ namespace xinrongys
             get { return ext2; }
             set { ext2 = value; }
         }
+        public virtual int _Ext3
+        {
+            get { return ext3; }
+            set { ext3 = value; }
+        }
         public virtual string _Province
         {
             get { return province; }
@@ -189,6 +198,11 @@ namespace xinrongys
         {
             get { return currency; }
             set { currency = value; }
+        }
+        public virtual string _Fax
+        {
+            get { return _fax; }
+            set { _fax = value; }
         }
         static public List<string> getColumnHeader()
         {
