@@ -31,7 +31,7 @@ namespace xinrongys
         protected string b_name;
         protected string b_account;
         protected int day;
-        protected string currency;
+        protected int currency;
         protected string fax;
         protected int ext3;
         #endregion
@@ -59,11 +59,11 @@ namespace xinrongys
             this.b_name = myData.GetString(17);
             this.b_account = myData.GetString(18);
             this.day = (int)myData.GetDecimal(19);
-            this.currency = myData.GetString(20);
+            this.currency = (int)myData.GetDecimal(20);
             this.fax = myData.GetString(21);
             this.ext3 = (int)myData.GetDecimal(22);
         }
-        public Customer(string id,string name, string shortname, string contacter, int mobile, string phone1, int ext1, string phone2, int ext2, string province, string city, string town, string village, string district, string zone, string addr, string mail, string b_name, string b_account, int day, string currency,string fax,int ext3)
+        public Customer(string id,string name, string shortname, string contacter, int mobile, string phone1, int ext1, string phone2, int ext2, string province, string city, string town, string village, string district, string zone, string addr, string mail, string b_name, string b_account, int day, int currency,string fax,int ext3)
         {
             this.id = id;
             this.name = name;
@@ -196,7 +196,7 @@ namespace xinrongys
             get { return day; }
             set { day = value; }
         }
-        public virtual string _Currency
+        public virtual int _Currency
         {
             get { return currency; }
             set { currency = value; }
@@ -275,7 +275,7 @@ namespace xinrongys
             column.Add(this.b_name);
             column.Add(this.b_account);
             column.Add(this.day.ToString());
-            column.Add(this.currency);
+            column.Add(this.currency.ToString());
             column.Add(this.fax);
             column.Add(this.ext3.ToString());
             return column;
