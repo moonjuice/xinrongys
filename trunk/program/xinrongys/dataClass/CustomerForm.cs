@@ -37,6 +37,7 @@ namespace xinrongys
             InitializeComponent();
             this.enterButton.Text = "新增";
             this.navBarPanel.Visible = false;
+            this.currencyBox.SelectedIndex = 0;
         }
         public Connector Connect
         {
@@ -101,6 +102,7 @@ namespace xinrongys
             dayTextBox.Text = c._Day.ToString();
             b_accountTextBox.Text = c._B_account;
             b_nameTextBox.Text = c._B_name;
+            this.currencyBox.SelectedIndex = c._Currency;
             this.pageTextBox.Text = (this.index+1).ToString();
         }
 
@@ -115,7 +117,7 @@ namespace xinrongys
             c._B_name = b_nameTextBox.Text;
             c._City = cityTextBox.Text;
             c._Contacter = contacterTextBox.Text;
-            c._Currency = currencyBox.Text;
+            c._Currency = currencyBox.SelectedIndex;
             c._Day = (int)Convert.ToDecimal(dayTextBox.Text);
             c._District = districtTextBox.Text;
             c._Ext1 = (int)Convert.ToDecimal(ext1TextBox.Text);
