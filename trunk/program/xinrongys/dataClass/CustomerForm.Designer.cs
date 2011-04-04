@@ -85,7 +85,7 @@
             this.firstButton = new System.Windows.Forms.Button();
             this.preButton = new System.Windows.Forms.Button();
             this.pageTextBox = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
+            this.pageCount = new System.Windows.Forms.Label();
             this.totalLabel = new System.Windows.Forms.Label();
             this.nextButton = new System.Windows.Forms.Button();
             this.lastButton = new System.Windows.Forms.Button();
@@ -606,7 +606,7 @@
             this.navBarPanel.Controls.Add(this.firstButton);
             this.navBarPanel.Controls.Add(this.preButton);
             this.navBarPanel.Controls.Add(this.pageTextBox);
-            this.navBarPanel.Controls.Add(this.label25);
+            this.navBarPanel.Controls.Add(this.pageCount);
             this.navBarPanel.Controls.Add(this.totalLabel);
             this.navBarPanel.Controls.Add(this.nextButton);
             this.navBarPanel.Controls.Add(this.lastButton);
@@ -645,17 +645,17 @@
             this.pageTextBox.TabIndex = 2;
             this.pageTextBox.TextChanged += new System.EventHandler(this.pageTextBox_TextChanged);
             // 
-            // label25
+            // pageCount
             // 
-            this.label25.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("新細明體", 12F);
-            this.label25.Location = new System.Drawing.Point(119, 6);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(12, 16);
-            this.label25.TabIndex = 3;
-            this.label25.Text = "/";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pageCount.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pageCount.AutoSize = true;
+            this.pageCount.Font = new System.Drawing.Font("新細明體", 12F);
+            this.pageCount.Location = new System.Drawing.Point(119, 6);
+            this.pageCount.Name = "pageCount";
+            this.pageCount.Size = new System.Drawing.Size(12, 16);
+            this.pageCount.TabIndex = 3;
+            this.pageCount.Text = "/";
+            this.pageCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // totalLabel
             // 
@@ -764,7 +764,7 @@
         private System.Windows.Forms.FlowLayoutPanel navBarPanel;
         private System.Windows.Forms.Button firstButton;
         private System.Windows.Forms.TextBox pageTextBox;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label pageCount;
         private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.Button preButton;
         private System.Windows.Forms.Button nextButton;

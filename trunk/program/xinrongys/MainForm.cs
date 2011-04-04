@@ -159,7 +159,6 @@ namespace xinrongys
             cf = new CustomerForm();
             cf.Connect = this.connect;
             cf.Customers = this.customers;
-            cf.setState(true);
             cf.FormClosed += new FormClosedEventHandler(cf_FormClosed);
             cf.Show();
         }
@@ -170,12 +169,16 @@ namespace xinrongys
         private void editCustomerMenuItem_Click(object sender, EventArgs e)
         {
             //TODO
-            cf = new CustomerForm();
-            cf.Connect = this.connect;
-            cf.Customers = this.customers;
-            cf.setState(false);
-            cf.FormClosed += new FormClosedEventHandler(cf_FormClosed);
-            cf.Show();
+            int i = customerView.SelectedRows[customerView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
+            if (i < customers.Count)
+            {
+                cf = new CustomerForm();
+                cf.Connect = this.connect;
+                cf.Customers = this.customers;
+                cf.setIndex(i);
+                cf.FormClosed += new FormClosedEventHandler(cf_FormClosed);
+                cf.Show();
+            }
         }
 
         /// <summary>
