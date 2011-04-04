@@ -297,7 +297,7 @@ namespace xinrongys
         }
         #endregion
         #region 修改資料
-        public bool edit(Customer c)
+        public bool edit(Customer c, Customer old)
         {
             bool result = false;
             string addSQL = "UPDATE customer SET ";
@@ -306,7 +306,7 @@ namespace xinrongys
                 addSQL = addSQL + c.getSQLStruct().ElementAt(i) + " = '"+c.getSQLData().ElementAt(i)+"',";
             }
             addSQL = addSQL.Substring(0,addSQL.Length-1);
-            addSQL = addSQL + " WHERE id = "+c._Id;
+            addSQL = addSQL + " WHERE id = "+old._Id;
             try
             {
                 MySqlCommand cmd = new MySqlCommand(addSQL, conn);
@@ -320,7 +320,7 @@ namespace xinrongys
             }
             return result;
         }
-        public bool edit(Supplier s)
+        public bool edit(Supplier s, Supplier old)
         {
             bool result = false;
             string addSQL = "UPDATE supplier SET ";
@@ -329,7 +329,7 @@ namespace xinrongys
                 addSQL = addSQL + s.getSQLStruct().ElementAt(i) + " = '" + s.getSQLData().ElementAt(i) + "',";
             }
             addSQL = addSQL.Substring(0, addSQL.Length - 1);
-            addSQL = addSQL + " WHERE id = " + s._Id;
+            addSQL = addSQL + " WHERE id = " + old._Id;
             try
             {
                 MySqlCommand cmd = new MySqlCommand(addSQL, conn);
@@ -343,7 +343,7 @@ namespace xinrongys
             }
             return result;
         }
-        public bool edit(Daomu d)
+        public bool edit(Daomu d, Daomu old)
         {
             bool result = false;
             string addSQL = "UPDATE daomu SET ";
@@ -352,7 +352,7 @@ namespace xinrongys
                 addSQL = addSQL + d.getSQLStruct().ElementAt(i) + " = '" + d.getSQLData().ElementAt(i) + "',";
             }
             addSQL = addSQL.Substring(0, addSQL.Length - 1);
-            addSQL = addSQL + " WHERE id = " + d._Id;
+            addSQL = addSQL + " WHERE id = " + old._Id;
             try
             {
                 MySqlCommand cmd = new MySqlCommand(addSQL, conn);
@@ -366,7 +366,7 @@ namespace xinrongys
             }
             return result;
         }
-        public bool edit(Making m)
+        public bool edit(Making m, Making old)
         {
             bool result = false;
             string addSQL = "UPDATE making SET ";
@@ -375,7 +375,7 @@ namespace xinrongys
                 addSQL = addSQL + m.getSQLStruct().ElementAt(i) + " = '" + m.getSQLData().ElementAt(i) + "',";
             }
             addSQL = addSQL.Substring(0, addSQL.Length - 1);
-            addSQL = addSQL + " WHERE id = " + m._Id;
+            addSQL = addSQL + " WHERE id = " + old._Id;
             try
             {
                 MySqlCommand cmd = new MySqlCommand(addSQL, conn);
