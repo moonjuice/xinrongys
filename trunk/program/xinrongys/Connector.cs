@@ -306,7 +306,7 @@ namespace xinrongys
                 addSQL = addSQL + c.getSQLStruct().ElementAt(i) + " = '"+c.getSQLData().ElementAt(i)+"',";
             }
             addSQL = addSQL.Substring(0,addSQL.Length-1);
-            addSQL = addSQL + " WHERE id = "+old._Id;
+            addSQL = addSQL + " WHERE id = '"+old._Id+"'";
             try
             {
                 MySqlCommand cmd = new MySqlCommand(addSQL, conn);
@@ -329,7 +329,7 @@ namespace xinrongys
                 addSQL = addSQL + s.getSQLStruct().ElementAt(i) + " = '" + s.getSQLData().ElementAt(i) + "',";
             }
             addSQL = addSQL.Substring(0, addSQL.Length - 1);
-            addSQL = addSQL + " WHERE id = " + old._Id;
+            addSQL = addSQL + " WHERE id = '" + old._Id +"'";
             try
             {
                 MySqlCommand cmd = new MySqlCommand(addSQL, conn);
@@ -352,7 +352,7 @@ namespace xinrongys
                 addSQL = addSQL + d.getSQLStruct().ElementAt(i) + " = '" + d.getSQLData().ElementAt(i) + "',";
             }
             addSQL = addSQL.Substring(0, addSQL.Length - 1);
-            addSQL = addSQL + " WHERE id = " + old._Id;
+            addSQL = addSQL + " WHERE id = '" + old._Id + "'";
             try
             {
                 MySqlCommand cmd = new MySqlCommand(addSQL, conn);
@@ -362,7 +362,7 @@ namespace xinrongys
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
-                MessageBox.Show("錯誤代碼： " + ex.Number + "\n 錯誤訊息 : " + ex.Message);
+                MessageBox.Show(old._Id+"\n錯誤代碼： " + ex.Number + "\n 錯誤訊息 : " + ex.Message);
             }
             return result;
         }
@@ -375,7 +375,7 @@ namespace xinrongys
                 addSQL = addSQL + m.getSQLStruct().ElementAt(i) + " = '" + m.getSQLData().ElementAt(i) + "',";
             }
             addSQL = addSQL.Substring(0, addSQL.Length - 1);
-            addSQL = addSQL + " WHERE id = " + old._Id;
+            addSQL = addSQL + " WHERE id = '" + old._Id + "'";
             try
             {
                 MySqlCommand cmd = new MySqlCommand(addSQL, conn);
