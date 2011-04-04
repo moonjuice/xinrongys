@@ -14,6 +14,7 @@ namespace xinrongys
         private Connector connect = null;
         private ConnectForm cnf;
         private CustomerForm cf;
+        private SupplierForm sf;
         private List<Customer> customers = new List<Customer>();
         private List<Supplier> suppliers = new List<Supplier>();
         private List<Making> makings = new List<Making>();
@@ -152,7 +153,7 @@ namespace xinrongys
         }
 
         /// <summary>
-        /// 新增一筆客戶
+        /// 新增客戶
         /// </summary>
         private void addCustomerMenuItem_Click(object sender, EventArgs e)
         {
@@ -168,7 +169,6 @@ namespace xinrongys
         /// </summary>
         private void editCustomerMenuItem_Click(object sender, EventArgs e)
         {
-            //TODO
             int i = customerView.SelectedRows[customerView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
             if (i < customers.Count)
             {
@@ -231,7 +231,10 @@ namespace xinrongys
         /// </summary>
         private void addSupplierMenuItem_Click(object sender, EventArgs e)
         {
-            SupplierForm sf = new SupplierForm();
+            sf = new SupplierForm();
+            sf.Connect = this.connect;
+            sf.Suppliers = this.suppliers;
+            sf.FormClosed += new FormClosedEventHandler(sf_FormClosed);
             sf.Show();
         }
 
@@ -240,8 +243,16 @@ namespace xinrongys
         /// </summary>
         private void editSupplierMenuItem_Click(object sender, EventArgs e)
         {
-            SupplierForm sf = new SupplierForm();
-            sf.Show();
+            int i = this.supplierView.SelectedRows[supplierView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
+            if (i < suppliers.Count)
+            {
+                sf = new SupplierForm();
+                sf.Connect = this.connect;
+                sf.Suppliers = this.suppliers;
+                sf.setIndex(i);
+                sf.FormClosed += new FormClosedEventHandler(sf_FormClosed);
+                sf.Show();
+            }
         }
 
         /// <summary>
@@ -283,8 +294,9 @@ namespace xinrongys
         /// <summary>
         /// 供應商基本資料視窗關閉要做的事情
         /// </summary>
-        private void supplierFormClosed(object sender, EventArgs e)
+        private void sf_FormClosed(object sender, EventArgs e)
         {
+            this.suppliers = sf.Suppliers;
             freshView("supplier");
         }
         
