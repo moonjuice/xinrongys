@@ -48,6 +48,7 @@ namespace xinrongys
             InitializeComponent();
             this.enterButton.Text = "新增";
             this.navBarPanel.Visible = false;
+            this.currencyBox.SelectedIndex = 0;
         }
 
         /// <summary>
@@ -64,7 +65,7 @@ namespace xinrongys
             s._B_name = b_nameTextBox.Text;
             s._City = cityTextBox.Text;
             s._Contacter = contacterTextBox.Text;
-            s._Currency = currencyBox.Text;
+            s._Currency = currencyBox.SelectedIndex;
             s._Day = (int)Convert.ToDecimal(dayTextBox.Text);
             s._District = districtTextBox.Text;
             s._Ext1 = (int)Convert.ToDecimal(ext1TextBox.Text);
@@ -131,6 +132,7 @@ namespace xinrongys
             b_accountTextBox.Text = "";
             b_nameTextBox.Text = "";
             pageTextBox.Text = "";
+            this.currencyBox.SelectedIndex = 0;
         }
 
         private void showData()
@@ -158,6 +160,7 @@ namespace xinrongys
             dayTextBox.Text = s._Day.ToString();
             b_accountTextBox.Text = s._B_account;
             b_nameTextBox.Text = s._B_name;
+            this.currencyBox.SelectedIndex = s._Currency;
             this.pageTextBox.Text = (this.index + 1).ToString();
         }
 
