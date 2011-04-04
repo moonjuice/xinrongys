@@ -63,7 +63,7 @@ namespace xinrongys
             this.fax = myData.GetString(21);
             this.ext3 = (int)myData.GetDecimal(22);
         }
-        public Customer(string id,string name, string shortname, string contacter, int mobile, string phone1, int ext1, string phone2, int ext2, string province, string city, string town, string village, string district, string zone, string addr, string mail, string b_name, string b_account, int day, string currency)
+        public Customer(string id,string name, string shortname, string contacter, int mobile, string phone1, int ext1, string phone2, int ext2, string province, string city, string town, string village, string district, string zone, string addr, string mail, string b_name, string b_account, int day, string currency,string fax,int ext3)
         {
             this.id = id;
             this.name = name;
@@ -86,6 +86,8 @@ namespace xinrongys
             this.b_account = b_account;
             this.day = day;
             this.currency = currency;
+            this.fax = fax;
+            this.ext3 = ext3;
         }
         #endregion
         #region Public Properties
@@ -246,6 +248,8 @@ namespace xinrongys
             column.Add("b_account");
             column.Add("day");
             column.Add("currency");
+            column.Add("fax");
+            column.Add("ext3");
             return column;
         }
         public List<string> getSQLData()
@@ -272,6 +276,8 @@ namespace xinrongys
             column.Add(this.b_account);
             column.Add(this.day.ToString());
             column.Add(this.currency);
+            column.Add(this.fax);
+            column.Add(this.ext3);
             return column;
         }
         #endregion
