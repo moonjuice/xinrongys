@@ -12,7 +12,8 @@ namespace xinrongys
     public partial class MainForm : Form
     {
         private Connector connect = null;
-        private ConnectForm cf;
+        private ConnectForm cnf;
+        private CustomerForm cf;
         private List<Customer> customers = new List<Customer>();
         private List<Supplier> suppliers = new List<Supplier>();
         private List<Making> makings = new List<Making>();
@@ -49,17 +50,17 @@ namespace xinrongys
         /// </summary>
         private void connectMenuItem_Click(object sender, EventArgs e)
         {
-            cf = new ConnectForm();
-            cf.FormClosed += new FormClosedEventHandler(cf_FormClosed);
-            cf.Show();
+            cnf = new ConnectForm();
+            cnf.FormClosed += new FormClosedEventHandler(cnf_FormClosed);
+            cnf.Show();
         }
 
         /// <summary>
         /// 連線視窗關閉要做的事情
         /// </summary>
-        private void cf_FormClosed(object sender, EventArgs e)
+        private void cnf_FormClosed(object sender, EventArgs e)
         {
-            connect = cf.getConnector();
+            connect = cnf.getConnector();
             if (connect != null)
             {
                 freshData("all");
@@ -155,8 +156,11 @@ namespace xinrongys
         /// </summary>
         private void addCustomerMenuItem_Click(object sender, EventArgs e)
         {
-            //TODO
-            CustomerForm cf = new CustomerForm();
+            cf = new CustomerForm();
+            cf.Connect = this.connect;
+            cf.Customers = this.customers;
+            cf.setState(true);
+            cf.FormClosed += new FormClosedEventHandler(cf_FormClosed);
             cf.Show();
         }
 
@@ -166,7 +170,11 @@ namespace xinrongys
         private void editCustomerMenuItem_Click(object sender, EventArgs e)
         {
             //TODO
-            CustomerForm cf = new CustomerForm();
+            cf = new CustomerForm();
+            cf.Connect = this.connect;
+            cf.Customers = this.customers;
+            cf.setState(false);
+            cf.FormClosed += new FormClosedEventHandler(cf_FormClosed);
             cf.Show();
         }
 
@@ -209,8 +217,9 @@ namespace xinrongys
         /// <summary>
         /// 客戶基本資料視窗關閉要做的事情
         /// </summary>
-        private void customerFormClosed(object sender, EventArgs e)
+        private void cf_FormClosed(object sender, EventArgs e)
         {
+            this.customers = cf.Customers;
             freshView("customer");
         }
 

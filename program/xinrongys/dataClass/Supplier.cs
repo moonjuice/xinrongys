@@ -197,8 +197,8 @@ namespace xinrongys
         }
         public virtual string _Fax
         {
-            get { return _fax; }
-            set { _fax = value; }
+            get { return fax; }
+            set { fax = value; }
         }
         public virtual int _Ext3
         {
@@ -276,7 +276,7 @@ namespace xinrongys
             column.Add(this.day.ToString());
             column.Add(this.currency);
             column.Add(this.fax);
-            column.Add(this.ext3);
+            column.Add(this.ext3.ToString());
             return column;
         }
         #endregion
