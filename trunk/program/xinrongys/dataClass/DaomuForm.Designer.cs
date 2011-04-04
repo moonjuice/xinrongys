@@ -528,6 +528,7 @@
             // typeComboBox
             // 
             this.typeComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.typeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.typeComboBox.Font = new System.Drawing.Font("新細明體", 12F);
             this.typeComboBox.FormattingEnabled = true;
             this.typeComboBox.Items.AddRange(new object[] {
@@ -539,7 +540,6 @@
             this.typeComboBox.Name = "typeComboBox";
             this.typeComboBox.Size = new System.Drawing.Size(106, 24);
             this.typeComboBox.TabIndex = 9;
-            this.typeComboBox.Text = "方形直角刀";
             // 
             // label5
             // 

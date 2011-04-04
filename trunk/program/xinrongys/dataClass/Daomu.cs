@@ -12,7 +12,7 @@ namespace xinrongys
     {
         #region Member Variables
         protected string id;
-        protected string type;
+        protected int type;
         protected int cabinet;
         protected int d_long;
         protected int d_width;
@@ -27,7 +27,7 @@ namespace xinrongys
         public Daomu(MySqlDataReader myData) 
         {
             this.id = myData.GetString(0);
-            this.type = myData.GetString(1);
+            this.type = (int)myData.GetDecimal(1);
             this.cabinet = (int)myData.GetDecimal(2);
             this.d_long = (int)myData.GetDecimal(3);
             this.d_width = (int)myData.GetDecimal(4);
@@ -37,7 +37,7 @@ namespace xinrongys
             this.w_m = (int)myData.GetDecimal(8);
             this.w_d = (int)myData.GetDecimal(9);
         }
-        public Daomu(string type, int cabinet, int d_long, int d_width, int d_round, int l_m, int l_d, int w_m, int w_d)
+        public Daomu(int type, int cabinet, int d_long, int d_width, int d_round, int l_m, int l_d, int w_m, int w_d)
         {
             this.type = type;
             this.cabinet = cabinet;
@@ -56,7 +56,7 @@ namespace xinrongys
             get { return id; }
             set { id = value; }
         }
-        public virtual string _Type
+        public virtual int _Type
         {
             get { return type; }
             set { type = value; }
@@ -112,7 +112,7 @@ namespace xinrongys
         {
             List<string> column = new List<string>();
             column.Add(this.id);
-            column.Add(this.type);
+            column.Add(this.type.ToString());
             return column;
         }
         public List<string> getSQLStruct()
@@ -134,7 +134,7 @@ namespace xinrongys
         {
             List<string> column = new List<string>();
             column.Add(this.id);
-            column.Add(this.type);
+            column.Add(this.type.ToString());
             column.Add(this.cabinet.ToString());
             column.Add(this.d_long.ToString());
             column.Add(this.d_width.ToString());

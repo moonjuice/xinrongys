@@ -33,6 +33,7 @@ namespace xinrongys
             InitializeComponent();
             this.enterButton.Text = "新增";
             this.navBarPanel.Visible = false;
+            this.typeComboBox.SelectedIndex = 0;
         }
         public void setIndex(int i)
         {
@@ -60,7 +61,7 @@ namespace xinrongys
             this.idTextBox.Text = "";
             this.l_dTextBox.Text = "";
             this.l_mTextBox.Text = "";
-            this.typeComboBox.Text = "";
+            this.typeComboBox.SelectedIndex = 0;
             this.w_dTextBox.Text = "";
             this.w_mTextBox.Text = "";
         }
@@ -75,7 +76,7 @@ namespace xinrongys
             this.idTextBox.Text = d._Id;
             this.l_dTextBox.Text = d._L_d.ToString();
             this.l_mTextBox.Text = d._L_m.ToString();
-            this.typeComboBox.Text = d._Type;
+            this.typeComboBox.SelectedIndex = d._Type;
             this.w_dTextBox.Text = d._W_d.ToString();
             this.w_mTextBox.Text = d._W_m.ToString();
             this.pageTextBox.Text = (this.index + 1).ToString();
@@ -92,7 +93,7 @@ namespace xinrongys
             d._Id = this.idTextBox.Text;
             d._L_d = (int)Convert.ToDecimal(this.l_dTextBox.Text);
             d._L_m = (int)Convert.ToDecimal(this.l_mTextBox.Text);
-            d._Type = this.typeComboBox.Text;
+            d._Type = this.typeComboBox.SelectedIndex;
             d._W_d = (int)Convert.ToDecimal(this.w_dTextBox.Text);
             d._W_m = (int)Convert.ToDecimal(this.w_mTextBox.Text);
             if (!this.isEdit)
