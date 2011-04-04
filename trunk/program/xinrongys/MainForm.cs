@@ -77,32 +77,37 @@ namespace xinrongys
         /// <param name="tableName">要整理的表格名稱</param>
         private void freshData(string tableName)
         {
-            switch(tableName)
+            if (this.connect == null)
+                MessageBox.Show("請先連線至資料庫!!");
+            else
             {
-                case "all" :
-                    freshData("customer");
-                    freshData("supplier");
-                    freshData("making");
-                    freshData("daomu");
-                    break;
-                case "customer":
-                    customers.Clear();
-                    customers = connect.getCustomers();
-                    break;
-                case "supplier":
-                    suppliers.Clear();
-                    suppliers = connect.getSuppliers();
-                    break;
-                case "making":
-                    makings.Clear();
-                    makings = connect.getMakings();
-                    break;
-                case "daomu":
-                    daomus.Clear();
-                    daomus = connect.getDaomus();
-                    break;
-                default:
-                    break;
+                switch (tableName)
+                {
+                    case "all":
+                        freshData("customer");
+                        freshData("supplier");
+                        freshData("making");
+                        freshData("daomu");
+                        break;
+                    case "customer":
+                        customers.Clear();
+                        customers = connect.getCustomers();
+                        break;
+                    case "supplier":
+                        suppliers.Clear();
+                        suppliers = connect.getSuppliers();
+                        break;
+                    case "making":
+                        makings.Clear();
+                        makings = connect.getMakings();
+                        break;
+                    case "daomu":
+                        daomus.Clear();
+                        daomus = connect.getDaomus();
+                        break;
+                    default:
+                        break;
+                }
             }
         }
 
@@ -159,11 +164,16 @@ namespace xinrongys
         /// </summary>
         private void addCustomerMenuItem_Click(object sender, EventArgs e)
         {
-            cf = new CustomerForm();
-            cf.Connect = this.connect;
-            cf.Customers = this.customers;
-            cf.FormClosed += new FormClosedEventHandler(cf_FormClosed);
-            cf.Show();
+            if (this.connect == null)
+                MessageBox.Show("請先連線至資料庫!!");
+            else
+            {
+                cf = new CustomerForm();
+                cf.Connect = this.connect;
+                cf.Customers = this.customers;
+                cf.FormClosed += new FormClosedEventHandler(cf_FormClosed);
+                cf.Show();
+            }            
         }
 
         /// <summary>
@@ -171,15 +181,20 @@ namespace xinrongys
         /// </summary>
         private void editCustomerMenuItem_Click(object sender, EventArgs e)
         {
-            int i = customerView.SelectedRows[customerView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
-            if (i < customers.Count)
+            if (this.connect == null)
+                MessageBox.Show("請先連線至資料庫!!");
+            else
             {
-                cf = new CustomerForm();
-                cf.Connect = this.connect;
-                cf.Customers = this.customers;
-                cf.setIndex(i);
-                cf.FormClosed += new FormClosedEventHandler(cf_FormClosed);
-                cf.Show();
+                int i = customerView.SelectedRows[customerView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
+                if (i < customers.Count)
+                {
+                    cf = new CustomerForm();
+                    cf.Connect = this.connect;
+                    cf.Customers = this.customers;
+                    cf.setIndex(i);
+                    cf.FormClosed += new FormClosedEventHandler(cf_FormClosed);
+                    cf.Show();
+                }
             }
         }
 
@@ -188,23 +203,28 @@ namespace xinrongys
         /// </summary>
         private void delCustomerMenuItem_Click(object sender, EventArgs e)
         {
-            int index = customerView.SelectedRows[customerView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
-            if (index < customers.Count)
+            if (this.connect == null)
+                MessageBox.Show("請先連線至資料庫!!");
+            else
             {
-                string message = "你確定要刪除客戶編號：" + customers[index]._Id + "，\n客戶名稱：" + customers[index]._Name + "這筆資料？";
-                string caption = "刪除客戶資料";
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result;
-                result = MessageBox.Show(message, caption, buttons,MessageBoxIcon.Warning);
-                if (result == System.Windows.Forms.DialogResult.Yes)
+                int index = customerView.SelectedRows[customerView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
+                if (index < customers.Count)
                 {
-                    if (connect.del(customers[index]))
+                    string message = "你確定要刪除客戶編號：" + customers[index]._Id + "，\n客戶名稱：" + customers[index]._Name + "這筆資料？";
+                    string caption = "刪除客戶資料";
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result;
+                    result = MessageBox.Show(message, caption, buttons, MessageBoxIcon.Warning);
+                    if (result == System.Windows.Forms.DialogResult.Yes)
                     {
-                        customers.RemoveAt(index);
-                        freshView("customer");
+                        if (connect.del(customers[index]))
+                        {
+                            customers.RemoveAt(index);
+                            freshView("customer");
+                        }
                     }
                 }
-            }            
+            }                        
         }
 
         /// <summary>
@@ -233,11 +253,16 @@ namespace xinrongys
         /// </summary>
         private void addSupplierMenuItem_Click(object sender, EventArgs e)
         {
-            sf = new SupplierForm();
-            sf.Connect = this.connect;
-            sf.Suppliers = this.suppliers;
-            sf.FormClosed += new FormClosedEventHandler(sf_FormClosed);
-            sf.Show();
+            if (this.connect == null)
+                MessageBox.Show("請先連線至資料庫!!");
+            else
+            {
+                sf = new SupplierForm();
+                sf.Connect = this.connect;
+                sf.Suppliers = this.suppliers;
+                sf.FormClosed += new FormClosedEventHandler(sf_FormClosed);
+                sf.Show();
+            }
         }
 
         /// <summary>
@@ -245,16 +270,21 @@ namespace xinrongys
         /// </summary>
         private void editSupplierMenuItem_Click(object sender, EventArgs e)
         {
-            int i = this.supplierView.SelectedRows[supplierView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
-            if (i < suppliers.Count)
+            if (this.connect == null)
+                MessageBox.Show("請先連線至資料庫!!");
+            else
             {
-                sf = new SupplierForm();
-                sf.Connect = this.connect;
-                sf.Suppliers = this.suppliers;
-                sf.setIndex(i);
-                sf.FormClosed += new FormClosedEventHandler(sf_FormClosed);
-                sf.Show();
-            }
+                int i = this.supplierView.SelectedRows[supplierView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
+                if (i < suppliers.Count)
+                {
+                    sf = new SupplierForm();
+                    sf.Connect = this.connect;
+                    sf.Suppliers = this.suppliers;
+                    sf.setIndex(i);
+                    sf.FormClosed += new FormClosedEventHandler(sf_FormClosed);
+                    sf.Show();
+                }
+            }            
         }
 
         /// <summary>
@@ -262,20 +292,25 @@ namespace xinrongys
         /// </summary>
         private void delSupplierMenuItem_Click(object sender, EventArgs e)
         {
-            int index = supplierView.SelectedRows[supplierView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
-            if (index < suppliers.Count)
+            if (this.connect == null)
+                MessageBox.Show("請先連線至資料庫!!");
+            else
             {
-                string message = "你確定要刪除供應商編號：" + suppliers[index]._Id + "，\n供應商名稱：" + suppliers[index]._Name + "這筆資料？";
-                string caption = "刪除供應商資料";
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result;
-                result = MessageBox.Show(message, caption, buttons, MessageBoxIcon.Warning);
-                if (result == System.Windows.Forms.DialogResult.Yes)
+                int index = supplierView.SelectedRows[supplierView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
+                if (index < suppliers.Count)
                 {
-                    if (connect.del(suppliers[index]))
+                    string message = "你確定要刪除供應商編號：" + suppliers[index]._Id + "，\n供應商名稱：" + suppliers[index]._Name + "這筆資料？";
+                    string caption = "刪除供應商資料";
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result;
+                    result = MessageBox.Show(message, caption, buttons, MessageBoxIcon.Warning);
+                    if (result == System.Windows.Forms.DialogResult.Yes)
                     {
-                        suppliers.RemoveAt(index);
-                        freshView("supplier");
+                        if (connect.del(suppliers[index]))
+                        {
+                            suppliers.RemoveAt(index);
+                            freshView("supplier");
+                        }
                     }
                 }
             }
@@ -307,11 +342,16 @@ namespace xinrongys
         /// </summary>
         private void addMakingMenuItem_Click(object sender, EventArgs e)
         {
-            mf = new MakingForm();
-            mf.Connect = this.connect;
-            mf.Makings = this.makings;
-            mf.FormClosed += new FormClosedEventHandler(mf_FormClosed);
-            mf.Show();
+            if (this.connect == null)
+                MessageBox.Show("請先連線至資料庫!!");
+            else
+            {
+                mf = new MakingForm();
+                mf.Connect = this.connect;
+                mf.Makings = this.makings;
+                mf.FormClosed += new FormClosedEventHandler(mf_FormClosed);
+                mf.Show();
+            }            
         }
 
         /// <summary>
@@ -319,16 +359,21 @@ namespace xinrongys
         /// </summary>
         private void editMakingMenuItem_Click(object sender, EventArgs e)
         {
-            int index = makingView.SelectedRows[makingView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
-            if (index < makings.Count)
+            if (this.connect == null)
+                MessageBox.Show("請先連線至資料庫!!");
+            else
             {
-                mf = new MakingForm();
-                mf.Connect = this.connect;
-                mf.Makings = this.makings;
-                mf.setIndex(index);
-                mf.FormClosed += new FormClosedEventHandler(mf_FormClosed);
-                mf.Show();
-            }            
+                int index = makingView.SelectedRows[makingView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
+                if (index < makings.Count)
+                {
+                    mf = new MakingForm();
+                    mf.Connect = this.connect;
+                    mf.Makings = this.makings;
+                    mf.setIndex(index);
+                    mf.FormClosed += new FormClosedEventHandler(mf_FormClosed);
+                    mf.Show();
+                }   
+            }         
         }
 
         /// <summary>
@@ -336,23 +381,28 @@ namespace xinrongys
         /// </summary>
         private void delMakingMenuItem_Click(object sender, EventArgs e)
         {
-            int index = makingView.SelectedRows[makingView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
-            if (index < makings.Count)
+            if (this.connect == null)
+                MessageBox.Show("請先連線至資料庫!!");
+            else
             {
-                string message = "你確定要刪除材料編號：" + makings[index]._Id + "，\n材料名稱：" + makings[index]._Name + "這筆資料？";
-                string caption = "刪除材料資料";
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result;
-                result = MessageBox.Show(message, caption, buttons, MessageBoxIcon.Warning);
-                if (result == System.Windows.Forms.DialogResult.Yes)
+                int index = makingView.SelectedRows[makingView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
+                if (index < makings.Count)
                 {
-                    if (connect.del(makings[index]))
+                    string message = "你確定要刪除材料編號：" + makings[index]._Id + "，\n材料名稱：" + makings[index]._Name + "這筆資料？";
+                    string caption = "刪除材料資料";
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result;
+                    result = MessageBox.Show(message, caption, buttons, MessageBoxIcon.Warning);
+                    if (result == System.Windows.Forms.DialogResult.Yes)
                     {
-                        makings.RemoveAt(index);
-                        freshView("making");
+                        if (connect.del(makings[index]))
+                        {
+                            makings.RemoveAt(index);
+                            freshView("making");
+                        }
                     }
                 }
-            }
+            }             
         }
 
         /// <summary>
@@ -381,11 +431,16 @@ namespace xinrongys
         /// </summary>
         private void addDaomuMenuItem_Click(object sender, EventArgs e)
         {
-            df = new DaomuForm();
-            df.Connect = this.connect;
-            df.Daomus = this.daomus;
-            df.FormClosed += new FormClosedEventHandler(df_FormClosed);
-            df.Show();
+            if (this.connect == null)
+                MessageBox.Show("請先連線至資料庫!!");
+            else
+            {
+                df = new DaomuForm();
+                df.Connect = this.connect;
+                df.Daomus = this.daomus;
+                df.FormClosed += new FormClosedEventHandler(df_FormClosed);
+                df.Show();
+            }
         }
 
         /// <summary>
@@ -393,15 +448,20 @@ namespace xinrongys
         /// </summary>
         private void editDaomuMenuItem_Click(object sender, EventArgs e)
         {
-            int index = daomuView.SelectedRows[daomuView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
-            if (index < daomus.Count)
+            if (this.connect == null)
+                MessageBox.Show("請先連線至資料庫!!");
+            else
             {
-                df = new DaomuForm();
-                df.Connect = this.connect;
-                df.Daomus = this.daomus;
-                df.setIndex(index);
-                df.FormClosed += new FormClosedEventHandler(df_FormClosed);
-                df.Show();
+                int index = daomuView.SelectedRows[daomuView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
+                if (index < daomus.Count)
+                {
+                    df = new DaomuForm();
+                    df.Connect = this.connect;
+                    df.Daomus = this.daomus;
+                    df.setIndex(index);
+                    df.FormClosed += new FormClosedEventHandler(df_FormClosed);
+                    df.Show();
+                }
             }
         }
 
@@ -410,23 +470,28 @@ namespace xinrongys
         /// </summary>
         private void delDaomuMenuItem_Click(object sender, EventArgs e)
         {
-            int index = daomuView.SelectedRows[daomuView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
-            if (index < daomus.Count)
+            if (this.connect == null)
+                MessageBox.Show("請先連線至資料庫!!");
+            else
             {
-                string message = "你確定要刪除刀模編號：" + daomus[index]._Id + "，\n刀模櫃號：" + daomus[index]._Cabinet + "這筆資料？";
-                string caption = "刪除刀模資料";
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result;
-                result = MessageBox.Show(message, caption, buttons, MessageBoxIcon.Warning);
-                if (result == System.Windows.Forms.DialogResult.Yes)
+                int index = daomuView.SelectedRows[daomuView.Rows.GetRowCount(DataGridViewElementStates.Selected) - 1].Index;
+                if (index < daomus.Count)
                 {
-                    if (connect.del(daomus[index]))
+                    string message = "你確定要刪除刀模編號：" + daomus[index]._Id + "，\n刀模櫃號：" + daomus[index]._Cabinet + "這筆資料？";
+                    string caption = "刪除刀模資料";
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result;
+                    result = MessageBox.Show(message, caption, buttons, MessageBoxIcon.Warning);
+                    if (result == System.Windows.Forms.DialogResult.Yes)
                     {
-                        daomus.RemoveAt(index);
-                        freshView("daomu");
+                        if (connect.del(daomus[index]))
+                        {
+                            daomus.RemoveAt(index);
+                            freshView("daomu");
+                        }
                     }
                 }
-            }
+            }            
         }
 
         /// <summary>
