@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.navBarPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.firstButton = new System.Windows.Forms.Button();
             this.preButton = new System.Windows.Forms.Button();
             this.pageTextBox = new System.Windows.Forms.TextBox();
-            this.pageLabel = new System.Windows.Forms.Label();
+            this.pageCount = new System.Windows.Forms.Label();
             this.totalLabel = new System.Windows.Forms.Label();
             this.nextButton = new System.Windows.Forms.Button();
             this.lastButton = new System.Windows.Forms.Button();
@@ -41,7 +41,7 @@
             this.priceTextBox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.saveButton = new System.Windows.Forms.Button();
+            this.enterButton = new System.Windows.Forms.Button();
             this.unitComboBox = new System.Windows.Forms.ComboBox();
             this.s_idTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.typeComboBox = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.navBarPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +65,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel1, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.navBarPanel, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 121);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -74,20 +74,20 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(558, 30);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
-            // flowLayoutPanel1
+            // navBarPanel
             // 
-            this.flowLayoutPanel1.Controls.Add(this.firstButton);
-            this.flowLayoutPanel1.Controls.Add(this.preButton);
-            this.flowLayoutPanel1.Controls.Add(this.pageTextBox);
-            this.flowLayoutPanel1.Controls.Add(this.pageLabel);
-            this.flowLayoutPanel1.Controls.Add(this.totalLabel);
-            this.flowLayoutPanel1.Controls.Add(this.nextButton);
-            this.flowLayoutPanel1.Controls.Add(this.lastButton);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(170, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(217, 24);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.navBarPanel.Controls.Add(this.firstButton);
+            this.navBarPanel.Controls.Add(this.preButton);
+            this.navBarPanel.Controls.Add(this.pageTextBox);
+            this.navBarPanel.Controls.Add(this.pageCount);
+            this.navBarPanel.Controls.Add(this.totalLabel);
+            this.navBarPanel.Controls.Add(this.nextButton);
+            this.navBarPanel.Controls.Add(this.lastButton);
+            this.navBarPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navBarPanel.Location = new System.Drawing.Point(170, 3);
+            this.navBarPanel.Name = "navBarPanel";
+            this.navBarPanel.Size = new System.Drawing.Size(217, 24);
+            this.navBarPanel.TabIndex = 0;
             // 
             // firstButton
             // 
@@ -97,6 +97,7 @@
             this.firstButton.Size = new System.Drawing.Size(26, 21);
             this.firstButton.TabIndex = 0;
             this.firstButton.UseVisualStyleBackColor = true;
+            this.firstButton.Click += new System.EventHandler(this.firstButton_Click);
             // 
             // preButton
             // 
@@ -106,6 +107,7 @@
             this.preButton.Size = new System.Drawing.Size(26, 21);
             this.preButton.TabIndex = 5;
             this.preButton.UseVisualStyleBackColor = true;
+            this.preButton.Click += new System.EventHandler(this.preButton_Click);
             // 
             // pageTextBox
             // 
@@ -114,18 +116,19 @@
             this.pageTextBox.Name = "pageTextBox";
             this.pageTextBox.Size = new System.Drawing.Size(46, 22);
             this.pageTextBox.TabIndex = 2;
+            this.pageTextBox.TextChanged += new System.EventHandler(this.pageTextBox_TextChanged);
             // 
-            // pageLabel
+            // pageCount
             // 
-            this.pageLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pageLabel.AutoSize = true;
-            this.pageLabel.Font = new System.Drawing.Font("新細明體", 12F);
-            this.pageLabel.Location = new System.Drawing.Point(119, 6);
-            this.pageLabel.Name = "pageLabel";
-            this.pageLabel.Size = new System.Drawing.Size(12, 16);
-            this.pageLabel.TabIndex = 3;
-            this.pageLabel.Text = "/";
-            this.pageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pageCount.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pageCount.AutoSize = true;
+            this.pageCount.Font = new System.Drawing.Font("新細明體", 12F);
+            this.pageCount.Location = new System.Drawing.Point(119, 6);
+            this.pageCount.Name = "pageCount";
+            this.pageCount.Size = new System.Drawing.Size(12, 16);
+            this.pageCount.TabIndex = 3;
+            this.pageCount.Text = "/";
+            this.pageCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // totalLabel
             // 
@@ -144,6 +147,7 @@
             this.nextButton.Size = new System.Drawing.Size(26, 21);
             this.nextButton.TabIndex = 6;
             this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // lastButton
             // 
@@ -153,6 +157,7 @@
             this.lastButton.Size = new System.Drawing.Size(26, 21);
             this.lastButton.TabIndex = 7;
             this.lastButton.UseVisualStyleBackColor = true;
+            this.lastButton.Click += new System.EventHandler(this.lastButton_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -197,7 +202,7 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.cancelButton);
-            this.flowLayoutPanel2.Controls.Add(this.saveButton);
+            this.flowLayoutPanel2.Controls.Add(this.enterButton);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(383, 93);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -213,16 +218,18 @@
             this.cancelButton.TabIndex = 1;
             this.cancelButton.Text = "取消";
             this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // saveButton
+            // enterButton
             // 
-            this.saveButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.saveButton.Location = new System.Drawing.Point(13, 3);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(75, 23);
-            this.saveButton.TabIndex = 0;
-            this.saveButton.Text = "儲存";
-            this.saveButton.UseVisualStyleBackColor = true;
+            this.enterButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.enterButton.Location = new System.Drawing.Point(13, 3);
+            this.enterButton.Name = "enterButton";
+            this.enterButton.Size = new System.Drawing.Size(75, 23);
+            this.enterButton.TabIndex = 0;
+            this.enterButton.Text = "儲存";
+            this.enterButton.UseVisualStyleBackColor = true;
+            this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
             // 
             // unitComboBox
             // 
@@ -358,8 +365,8 @@
             this.Name = "MakingForm";
             this.Text = "材料基本資料";
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
+            this.navBarPanel.ResumeLayout(false);
+            this.navBarPanel.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -370,11 +377,11 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel navBarPanel;
         private System.Windows.Forms.Button firstButton;
         private System.Windows.Forms.Button preButton;
         private System.Windows.Forms.TextBox pageTextBox;
-        private System.Windows.Forms.Label pageLabel;
+        private System.Windows.Forms.Label pageCount;
         private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.Button nextButton;
         private System.Windows.Forms.Button lastButton;
@@ -392,7 +399,7 @@
         private System.Windows.Forms.ComboBox typeComboBox;
         private System.Windows.Forms.TextBox priceTextBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button enterButton;
         private System.Windows.Forms.Button cancelButton;
     }
 }
