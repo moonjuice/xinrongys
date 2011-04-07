@@ -1,14 +1,44 @@
-#summary One-sentence summary of this page.
+#summary 開始使用
 #sidebar SideBar
 
-= Introduction =
+=開始使用=
+<wiki:toc max_depth="2" />
 
-Add your content here.
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+=打開主程式=
+首先打開主程式，通常你可以在"開始"→"所有程式"→"xinrongys"底下找到"xinrongys"主程式。
+程式畫面如下圖：
+<br />http://xinrongys.googlecode.com/files/program01.png<br />
+=連線到資料庫=
+  * 在做任何事情之前都必須連限制資料庫。
+  * 首先在功能列按下"設定"→"連線至資料庫"。
+<br />http://xinrongys.googlecode.com/files/program02.png<br />
+  * 接下來輸入資料庫網址，帳號，以及密碼。
+    * 如果你不知道上面三項資訊，請洽詢你的管理者。
+    * 如果你是在與資料庫伺服器同一台電腦上面操作，資料庫網址可以輸入localhost。
+<br />http://xinrongys.googlecode.com/files/program03.png<br />
+=資料操作=
+==新增資料==
+  * 按下滑鼠右鍵，會看到功能表，選擇"新增資料"，如下圖：
+<br />http://xinrongys.googlecode.com/files/program04.png<br />
+  * 以客戶資料為例，你會看到客戶資料視窗，如下圖所示：
+<br />http://xinrongys.googlecode.com/files/program05.png<br />
+  * 輸入完成之後，按下新增，如果新增成功則會出現"新增資料成功"視窗。
+<br />http://xinrongys.googlecode.com/files/program06.png<br />
+  * 之後，你可以繼續新增資料，或是按下取消，回到原來頁面。
+==修改資料==
+  * 在你要修改的該筆資料，按下滑鼠右鍵，會看到功能表，選擇"修改資料"，如下圖：
+<br />http://xinrongys.googlecode.com/files/program07.png<br />
+  * 以客戶資料為例，你會看到客戶資料視窗，如下圖所示：
+<br />http://xinrongys.googlecode.com/files/program08.png<br />
+  * 輸入完成之後，按下修改，如果修改成功則會出現"修改資料成功"視窗。
+<br />http://xinrongys.googlecode.com/files/program09.png<br />
+  * 之後，你可以利用下面的導覽列，選擇你要修改的資料繼續修改，或是按下取消，回到原來頁面。
+<br />http://xinrongys.googlecode.com/files/program10.png<br />
+==刪除資料==
+  * 在你要刪除的該筆資料，按下滑鼠右鍵，會看到功能表，選擇"刪除資料"，如下圖：
+<br />http://xinrongys.googlecode.com/files/program11.png<br />
+  * 接下來會出現確認視窗，如下圖，確認資料無誤之後，按下是，或是按否回到原頁面。
+<br />http://xinrongys.googlecode.com/files/program12.png<br />
+==重新整理==
+按下滑鼠右鍵，會看到功能表，選擇"重新整理"，如下圖：
+<br />http://xinrongys.googlecode.com/files/program13.png<br />
