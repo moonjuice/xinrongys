@@ -1,14 +1,17 @@
-#summary One-sentence summary of this page.
+#summary 使用人員指南
 #sidebar SideBar
 
-= Introduction =
+= 管理者 =
 
-Add your content here.
+請參考[DataBase 環境安裝與設定]一節。
+
+關於任何問題，可以參考[UserFAQ FAQ]，也可以在[UserFAQ FAQ]頁面下方提出使用方面問題。
 
 
-= Details =
+= 一般使用者 =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+第一次使用請參考[Program 主程式安裝]。
+
+程式操作細節請參考[GettingStarted 開始使用]。
+
+關於任何問題，可以參考[UserFAQ FAQ]，也可以在[UserFAQ FAQ]頁面下方提出使用方面問題。
