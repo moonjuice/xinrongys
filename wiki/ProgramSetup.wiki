@@ -1,14 +1,18 @@
-#summary One-sentence summary of this page.
+#summary 主程式安裝
 #sidebar SideBar
 
-= Introduction =
+=下載主程式=
 
-Add your content here.
+下載[http://code.google.com/p/xinrongys/downloads/detail?name=publish.rar&can=2&q=#makechanges publish.rar]壓縮檔，並且將資料夾解壓縮。
 
+=安裝主程式=
 
-= Details =
+打開解壓縮的資料夾，執行"setup.exe"，並在接下來的畫面選擇"安裝"。
+<br />http://xinrongys.googlecode.com/files/setup.png <br />
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+=解除安裝程式=
+
+直接到"控制台"→"解除安裝或變更程式"→"選擇xinrongys"→"解除安裝"，會如下圖所示：
+<br />http://xinrongys.googlecode.com/files/uninstall.png <br />
+
+按下"確定"，即可完成移除程式。
