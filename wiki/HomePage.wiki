@@ -3,6 +3,6 @@
 
 = 歡迎使用 =
 
-* 如果你是使用者，請參考[UserMainPage 使用人員指南]
+* 如果你是管理者或是使用者，請參考[UserMainPage 使用人員指南]
 
-* 如果你是開發者，請參考[DeveloperMainPage 開發人員指南]
+* 如果你是程式開發人員，請參考[DeveloperMainPage 開發人員指南]
