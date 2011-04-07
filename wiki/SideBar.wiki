@@ -1,7 +1,7 @@
   * [HomePage 首頁]
     * [UserMainPage 使用人員指南]
       * [EnvironmentSetting 環境安裝與設定]
-      * [Program 主程式安裝]
+      * [ProgramSetup 主程式安裝]
       * [GettingStarted 開始使用]
       * [UserFAQ FAQ]
     * [DeveloperMainPage 開發人員指南]
