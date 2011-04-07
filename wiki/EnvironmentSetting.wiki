@@ -1,14 +1,23 @@
-#summary One-sentence summary of this page.
+#summary 環境安裝與設定
 #sidebar SideBar
 
-= Introduction =
+=環境安裝與設定=
+<wiki:toc max_depth="2" />
 
-Add your content here.
+=伺服器程式下載與安裝=
+==程式下載==
+下載[http://code.google.com/p/xinrongys/downloads/detail?name=xampp.part1.rar&can=2&q= xampp.part1.rar]與[http://code.google.com/p/xinrongys/downloads/detail?name=xampp.part2.rar&can=2&q= xampp.part2.rar]兩個壓縮檔
+==程式安裝==
+* 打開xampp.part1.rar壓縮檔，將xampp資料夾解壓縮。
+* 將解壓縮的xampp資料夾移動至你想放置的地方即可。
+  (注意：xampp資料夾放置的地方最好不要有中文，例如：桌面，避免發生錯誤。)
+==程式設定==
+* 進入XAMPP資料夾並且執行"setup_xampp.bat"用來設定XAMPP。
+  (注意：如果資料夾移動至別的地方，例如：C槽移動至D槽；隨身碟換到另一台電腦，建議都要執行這個步驟。)
+* 開啟之後畫面會如下圖所示，接下來我們輸入1：http://www.flycan.com/myimg/uploads/newbb/1_4938f7ae38a16.gif
+* 
+=開啟控制台=
 
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+=資料庫設定=
+==更改登入密碼==
+==新增使用者==
