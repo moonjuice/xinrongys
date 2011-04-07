@@ -3,7 +3,7 @@
 
 = 管理者 =
 
-請參考[DataBase 環境安裝與設定]一節。
+請參考[EnvironmentSetting 環境安裝與設定]一節。
 
 關於任何問題，可以參考[UserFAQ FAQ]，也可以在[UserFAQ FAQ]頁面下方提出使用方面問題。
 
