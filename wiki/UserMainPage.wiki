@@ -10,7 +10,7 @@
 
 = 一般使用者 =
 
-第一次使用請參考[Program 主程式安裝]。
+第一次使用請參考[ProgramSetup 主程式安裝]。
 
 程式操作細節請參考[GettingStarted 開始使用]。
 
