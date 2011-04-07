@@ -8,16 +8,32 @@
 ==程式下載==
 下載[http://code.google.com/p/xinrongys/downloads/detail?name=xampp.part1.rar&can=2&q= xampp.part1.rar]與[http://code.google.com/p/xinrongys/downloads/detail?name=xampp.part2.rar&can=2&q= xampp.part2.rar]兩個壓縮檔
 ==程式安裝==
-* 打開xampp.part1.rar壓縮檔，將xampp資料夾解壓縮。
-* 將解壓縮的xampp資料夾移動至你想放置的地方即可。
+  * 打開xampp.part1.rar壓縮檔，將xampp資料夾解壓縮。
+  * 將解壓縮的xampp資料夾移動至你想放置的地方即可。
   (注意：xampp資料夾放置的地方最好不要有中文，例如：桌面，避免發生錯誤。)
 ==程式設定==
-* 進入XAMPP資料夾並且執行"setup_xampp.bat"用來設定XAMPP。
+  * 進入XAMPP資料夾並且執行"setup_xampp.bat"用來設定XAMPP。
   (注意：如果資料夾移動至別的地方，例如：C槽移動至D槽；隨身碟換到另一台電腦，建議都要執行這個步驟。)
-* 開啟之後畫面會如下圖所示，接下來我們輸入1：http://www.flycan.com/myimg/uploads/newbb/1_4938f7ae38a16.gif
-* 
+  * 開啟之後畫面會如下圖所示，接下來我們輸入1：<br />
+    http://www.flycan.com/myimg/uploads/newbb/1_4938f7ae38a16.gif<br />
+  * 執行完成的結果會如下圖所示：<br />
+    http://www.flycan.com/myimg/uploads/newbb/1_4938f7b36226c.gif
 =開啟控制台=
-
+  * 進入XAMPP資料夾並且執行"xampp-control.exe"，畫面如下圖所示：<br />
+    http://www.ps3w.net/pages/?/document/xampp/wamppCP_00.gif<br />
+  * 這邊我們只需要使用到Apache與MySql，因此分別按下start，正常的結果如下圖所示：<br />
+    http://www.ps3w.net/pages/?/document/xampp/install_05_startCPA.png<br />
+  * 如果沒有辦法正常運作，請參考FAQ。
 =資料庫設定=
 ==更改登入密碼==
-==新增使用者==
+  * 延續上一個步驟，我們按下控制台上面的"Apache"旁的"Admin"按鈕(或輸入[http://localhoast http://localhoast])。
+  * 會出現如下圖畫面的網頁,接下來在頁面左下角，"工具"的下方，點選"phpMyAdmin"：<br />
+    http://xinrongys.googlecode.com/files/step0001.png<br />
+  * 接下來會要求輸入帳號密碼，
+    * 預設帳號：root
+    * 預設密碼：12369874
+<br />http://xinrongys.googlecode.com/files/step0002.png<br />
+  * 進入之後，點選更改密碼
+<br />http://xinrongys.googlecode.com/files/step0003.png<br />
+  * 輸入新密碼，以及再輸入一次確認密碼，接下來按執行就完成密碼的修改。
+<br />http://xinrongys.googlecode.com/files/step0004.png<br />
