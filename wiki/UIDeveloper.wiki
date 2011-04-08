@@ -5,7 +5,7 @@
 =打開專案=
   # 首先打開Visual Studio。
   # 選擇"檔案"→"開啟"→"Subversion Project"，如圖所示：
-  # Url輸入：https://xinrongys.googlecode.com/svn/trunk/UI/，選擇"xinrongysUI.sln"這個專案檔，如圖所示：
+  # Url輸入：[https://xinrongys.googlecode.com/svn/trunk/UI/]，選擇"xinrongysUI.sln"這個專案檔，如圖所示：
   # 接下來在Directory欄位輸入要儲存在本機的目錄位置，下圖所示：
   # 之後如果要打開專案，直接在儲存專案的位置打開"xinrongysUI.sln"就可以。
 =更新專案=
