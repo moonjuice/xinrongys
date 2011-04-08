@@ -1,14 +1,22 @@
-#summary One-sentence summary of this page.
+#summary 介面程式撰寫
 #sidebar SideBar
 
-= Introduction =
-
-Add your content here.
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+在開始之前，如果你還沒安裝開發環境相關程式，請參考[DevelopSetting 開發所需程式下載與安裝]一節。
+=打開專案=
+  # 首先打開Visual Studio。
+  # 選擇"檔案"→"開啟"→"Subversion Project"，如圖所示：
+  # Url輸入：https://xinrongys.googlecode.com/svn/trunk/UI/，選擇"xinrongysUI.sln"這個專案檔，如圖所示：
+  # 接下來在Directory欄位輸入要儲存在本機的目錄位置，下圖所示：
+  # 之後如果要打開專案，直接在儲存專案的位置打開"xinrongysUI.sln"就可以。
+=更新專案=
+  # 在方案按下滑鼠右鍵，選擇"Update Solution to Latest Version"就會開始更新，如下圖所示：
+  # 強烈建議每次開啟專案的時候，都應該更新一次。
+=介面撰寫=
+  # 在專案按下滑鼠右鍵，選擇"加入"→"Windows From"，如下圖所示：
+  # 選擇"Windows Form"並輸入檔名，如下圖所示：
+  # 打開之後就會看到基本介面，在整個視窗的左邊或是右邊可以看到"工具箱"(可能被隱藏起來在很邊邊，可能需要找一下)，直接將要新增項目從工具箱拉到介面就可以，如下圖所示：
+  # 細節調整，如下圖說明：
+=上傳專案=
+  # 在方案按下滑鼠右鍵，選擇"Commit Solution Changes"，如下圖所示：
+  # 在接下來的畫面，下方的"Log Message"填寫這次新增或是修改了哪些內容，如下圖所示：
+  # 按下"OK"，就可以完成這次上船內容。
