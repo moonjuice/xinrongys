@@ -5,7 +5,7 @@
       * [GettingStarted 開始使用]
       * [UserFAQ FAQ]
     * [DeveloperMainPage 開發人員指南]
-      * [DevelopSetting 程式安裝與設定]
+      * [DevelopSetting 開發所需程式下載與安裝]
       * [ProgramDeveloper 主程式撰寫]
       * [UIDeveloper 介面撰寫]
       * [DeveloperFAQ FAQ]
