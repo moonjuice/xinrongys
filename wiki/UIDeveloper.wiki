@@ -25,7 +25,7 @@
   # 細節調整，如下圖說明：
 <br />http://xinrongys.googlecode.com/files/UIDeveloperStep08.png<br />
 =上傳專案=
-  ※上傳需要Google帳號以及權限，如果不知道GoogleCode密碼，可以參考[DeveloperFAQ#如何知道上傳密碼 這裡]
+  ※上傳需要Google帳號以及權限，如果不知道密碼，可以參考[DeveloperFAQ 如何知道上傳密碼一節]
   # 在方案按下滑鼠右鍵，選擇"Commit Solution Changes"，如下圖所示：
 <br />http://xinrongys.googlecode.com/files/UIDeveloperStep09.png<br />
   # 在接下來的畫面，下方的"Log Message"填寫這次新增或是修改了哪些內容，如下圖所示：
