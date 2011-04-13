@@ -2,7 +2,7 @@
 #sidebar SideBar
 
 =下載與安裝Visual Studio=
-  # 如果你沒有Visual Studio ，可以[http://www.microsoft.com/express/Downloads/#2008-Visual-CS 點選這裡]下載免費版本，如圖所示：
+  # 如果你沒有Visual Studio ，可以[http://www.microsoft.com/express/Downloads/#Visual_Studio_2008_Express_Downloads 點選這裡]下載免費版本，如圖所示：
 <br />http://xinrongys.googlecode.com/files/DeveloperSetup01.png<br />
   # 安裝方式依照步驟即可。
 
