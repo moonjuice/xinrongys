@@ -2,6 +2,7 @@
 #sidebar SideBar
 
 在開始之前，如果你還沒安裝開發環境相關程式，請參考[DevelopSetting 開發所需程式下載與安裝]一節。
+<wiki:toc max_depth="1" />
 =打開專案=
   # 首先打開Visual Studio。
   # 選擇"檔案"→"開啟"→"Subversion Project"，如圖所示：
