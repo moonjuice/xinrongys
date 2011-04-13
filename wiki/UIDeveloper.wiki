@@ -29,4 +29,4 @@
 <br />http://xinrongys.googlecode.com/files/UIDeveloperStep09.png<br />
   # 在接下來的畫面，下方的"Log Message"填寫這次新增或是修改了哪些內容，如下圖所示：
 <br />http://xinrongys.googlecode.com/files/UIDeveloperStep10.png<br />
-  # 按下"OK"，就可以完成這次上船內容。
+  # 按下"OK"，就可以完成這次上傳內容。
