@@ -1,14 +1,6 @@
-#summary One-sentence summary of this page.
+#summary 開發人員FAQ
 #sidebar SideBar
 
-= Introduction =
-
-Add your content here.
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+=如何知道上傳密碼=
+[https://code.google.com/hosting/settings 按這裡]，會看到如下圖所示。
+<br />http://xinrongys.googlecode.com/files/DeveloperFAQ01.png<br />
