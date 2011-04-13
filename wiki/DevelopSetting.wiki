@@ -2,7 +2,7 @@
 #sidebar SideBar
 
 =下載與安裝Visual Studio=
-  # 如果你沒有Visual Studio ，可以[http://www.microsoft.com/express/Downloads/#Visual_Studio_2008_Express_Downloads 點選這裡]下載免費版本，如圖所示：<br />http://xinrongys.googlecode.com/files/DeveloperSetup01.png<br />
+  # 如果你沒有Visual Studio ，可以[http://www.microsoft.com/downloads/details.aspx?familyid=83C3A1EC-ED72-4A79-8961-25635DB0192B&displaylang=zh-tw 點選這裡]下載試用版本，如圖所示：<br />http://xinrongys.googlecode.com/files/DeveloperSetup01.png<br />
   # 安裝方式依照步驟即可。
 
 =下載與安裝Ankhsvn=
