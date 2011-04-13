@@ -3,9 +3,10 @@
 
 =下載與安裝Visual Studio=
   # 如果你沒有Visual Studio ，可以[http://www.microsoft.com/express/Downloads/#2008-Visual-CS 點選這裡]下載免費版本，如圖所示：
+<br />http://xinrongys.googlecode.com/files/DeveloperSetup01.png<br />
   # 安裝方式依照步驟即可。
 
 =下載與安裝Ankhsvn=
   # [http://www.open.collab.net/servlets/OCNOptionalRegistration?id=ANKHSVN2.1.x 點選這裡]下載Ankhsvn，選擇畫面下方的Skip，如圖所示：
+<br />http://xinrongys.googlecode.com/files/DeveloperSetup02.png<br />
   # 安裝方式依照步驟即可。
-
