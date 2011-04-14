@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{FB3769B0-53F4-4604-B5F1-5917FE49BD68}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -72,6 +72,12 @@
     <Compile Include="MakingForm.designer.cs">
       <DependentUpon>MakingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Printing document.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing document.Designer.cs">
+      <DependentUpon>Printing document.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CustomerForm.resx">
@@ -86,9 +92,17 @@
     <EmbeddedResource Include="MakingForm.resx">
       <DependentUpon>MakingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Printing document.resx">
+      <DependentUpon>Printing document.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="quotation.resx">
+      <DependentUpon>quotation.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SupplierForm.resx">
@@ -110,6 +124,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="quotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="quotation.Designer.cs">
+      <DependentUpon>quotation.cs</DependentUpon>
     </Compile>
     <Compile Include="SupplierForm.cs">
       <SubType>Form</SubType>

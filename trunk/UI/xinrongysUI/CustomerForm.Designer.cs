@@ -259,7 +259,7 @@
             // 
             // shortnameTextBox
             // 
-            this.shortnameTextBox.Location = new System.Drawing.Point(641, 21);
+            this.shortnameTextBox.Location = new System.Drawing.Point(639, 21);
             this.shortnameTextBox.Name = "shortnameTextBox";
             this.shortnameTextBox.Size = new System.Drawing.Size(88, 27);
             this.shortnameTextBox.TabIndex = 21;
@@ -562,7 +562,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 88);
+            this.label22.Location = new System.Drawing.Point(8, 88);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(88, 16);
             this.label22.TabIndex = 4;
@@ -571,7 +571,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 56);
+            this.label21.Location = new System.Drawing.Point(8, 56);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(88, 16);
             this.label21.TabIndex = 3;
