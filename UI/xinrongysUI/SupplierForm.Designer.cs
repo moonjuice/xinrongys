@@ -500,7 +500,7 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(657, 98);
+            this.cancelButton.Location = new System.Drawing.Point(657, 97);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
             this.cancelButton.TabIndex = 43;
@@ -563,7 +563,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 88);
+            this.label22.Location = new System.Drawing.Point(9, 90);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(88, 16);
             this.label22.TabIndex = 4;
@@ -572,16 +572,17 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 56);
+            this.label21.Location = new System.Drawing.Point(9, 59);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(88, 16);
             this.label21.TabIndex = 3;
             this.label21.Text = "銀行帳號：";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(9, 23);
+            this.label20.Location = new System.Drawing.Point(9, 25);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(88, 16);
             this.label20.TabIndex = 2;
