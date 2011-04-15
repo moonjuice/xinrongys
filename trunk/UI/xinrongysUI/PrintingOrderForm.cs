@@ -9,14 +9,14 @@ using System.Windows.Forms;
 
 namespace xinrongysUI
 {
-    public partial class quotation : Form
+    public partial class PrintingOrderForm : Form
     {
-        public quotation()
+        public PrintingOrderForm()
         {
             InitializeComponent();
         }
 
-        private void quotation_Load(object sender, EventArgs e)
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }
