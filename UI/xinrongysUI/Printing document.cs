@@ -15,5 +15,25 @@ namespace xinrongysUI
         {
             InitializeComponent();
         }
+
+        private void Printing_document_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label30_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
